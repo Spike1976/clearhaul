@@ -74,7 +74,7 @@ See TEST_RESULTS.md.
 
 Install Docker Desktop under CH-D-0031, start Compose, and prove PostgreSQL, Redis, and MinIO healthy. Apply the existing migrations only after that proof. Build Milestone 2 against the database. Milestone 3 stays unstarted until Milestone 2 passes and the tag `clearhaul-m2-marketplace` exists.
 
-The blueprint file `docs\source\Project_ClearHaul_Blueprint.docx` is still absent. `docs\source\CLEARHAUL_MASTER_BUILD_PROMPT.md` is present. Do not push this branch unless Michael asks.
+The blueprint file `docs\source\Project_ClearHaul_Blueprint.docx` is still absent. `docs\source\CLEARHAUL_MASTER_BUILD_PROMPT.md` is present. `docs\source\MILESTONE_4_ENGINEERING_ORDER.md` and `docs\source\MILESTONE_5_ENGINEERING_ORDER.md` are present and not implemented. Michael asked for this record to be backed up on GitHub.
 
 ## Resume
 
