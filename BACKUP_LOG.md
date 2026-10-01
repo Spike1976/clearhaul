@@ -23,3 +23,19 @@ The restored tree contains recovery/repository.bundle.
 This restore did not start Docker, did not create a database, and did not run the application from the restored tree.
 
 No off-computer copy was made. The external-drive path has not been provided.
+
+## m1-entry-20260930
+
+Creation time: 2026-09-30
+Project commit: af39543
+Branch recorded on the backup: milestone/m1-entry-repair
+Backup identifier: m1-entry-20260930
+Location: C:\Users\17402\ClearHaul-Backups\worktree\m1-entry-20260930\m1-entry-20260930
+Key file: C:\Users\17402\ClearHaul-Backups\configuration\m1-entry-20260930-key.json
+Encryption: AES-256-GCM
+Create command exit code: 0
+Restore command exit code: 0
+Restore location: C:\Users\17402\ClearHaul-Backups\restore-test\m1-entry-20260930
+Verification result: verified
+README.md hashes matched because that file was unchanged. The restored Program.cs hash differs from the later working tree, which is the pre-repair snapshot.
+This backup was taken before the identity-foundation edits. It does not contain a database. Docker was not started.

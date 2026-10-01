@@ -6,5 +6,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\ClearHaul.Contracts\ClearHaul.Contracts.csproj" />
+    <ProjectReference Include="..\ClearHaul.Domain\ClearHaul.Domain.csproj" />
   </ItemGroup>
 </Project>

@@ -424,10 +424,14 @@
       "clearhaul.contracts": {
         "type": "Project"
       },
+      "clearhaul.domain": {
+        "type": "Project"
+      },
       "clearhaul.server": {
         "type": "Project",
         "dependencies": {
-          "ClearHaul.Contracts": "[0.1.0-foundation, )"
+          "ClearHaul.Contracts": "[0.1.0-foundation, )",
+          "ClearHaul.Domain": "[0.2.0-phase-zero, )"
         }
       }
     }

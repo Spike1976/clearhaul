@@ -6,21 +6,19 @@ Exit code: 0
 
 | Project | Passed | Failed | Skipped |
 | --- | ---: | ---: | ---: |
-| ClearHaul.Domain.Tests | 36 | 0 | 0 |
-| ClearHaul.Server.Tests | 6 | 0 | 0 |
+| ClearHaul.Domain.Tests | 39 | 0 | 0 |
+| ClearHaul.Server.Tests | 12 | 0 | 0 |
 | ClearHaul.Client.Tests | 5 | 0 | 0 |
 | ClearHaul.Backup.Tests | 4 | 0 | 0 |
 | ClearHaul.Security.Tests | 1 | 0 | 0 |
-| Total | 52 | 0 | 0 |
+| Total | 61 | 0 | 0 |
 
-The domain tests construct the in-process model. They do not open PostgreSQL, Redis, MinIO, a bank, or a verification service. The 30 blueprint scenarios are covered there, along with catalog, ledger, retention, and permission checks. Live rule evaluation asserts UNABLE TO DETERMINE. Fixture decisions are requested with live evaluation turned off.
+Domain tests include the Phase Zero marketplace rules and the new qualification and audit-hash checks. They do not open PostgreSQL.
 
-The server tests use the in-process test host. They do not prove a listening process on port 5080.
+Server tests use the in-process host. Six cover the original health contract. Six cover the development directory: organization isolation, suspension, signed-out qualification, driver maintenance, worker health, and authentication disabled when the directory flag is off. They do not prove a listening process on port 5080.
 
-The client tests call `ServerHealthClient` with a stub handler. They do not click the window.
+The Windows client process started and was stopped after three seconds. The window button was not clicked.
 
-The backup tests use a temporary directory and an in-memory key. A separate restore of the foundation commit succeeded. See BACKUP_LOG.md entry m0-foundation-20260930. That archive does not contain Phase Zero.
+Backup m1-entry-20260930 restored with exit code 0. See BACKUP_LOG.md.
 
-The secret scan found no private-key block, Amazon-style access-key prefix, or certificate file in the tree it read. It does not scan ignored build output.
-
-Not run: Docker Compose, PostgreSQL migration `0001` or `0002`, installer, authentication, a live click of the window button, and XRP Ledger.
+Not run: Docker Compose, PostgreSQL, Redis, MinIO, a marketplace end-to-end test, and a database restore.

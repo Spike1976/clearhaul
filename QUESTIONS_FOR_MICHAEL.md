@@ -7,7 +7,42 @@ File opened: 2026-09-30
 How to answer a question:
 Type your letter under "Michael's answer:". Add a short note if you want. Save this file.
 
-Active questions are first. There are no active questions.
+Active questions are first.
+
+## Active questions
+
+QUESTION CH-0009
+
+Status: OPEN
+Priority: BLOCKING
+Area: Setup
+
+Plain-language question:
+May I install Docker Desktop and start the local Compose stack for PostgreSQL, Redis, and MinIO?
+
+Why this matters:
+Milestone 2 cannot start until Milestone 0 is proven. Docker is not installed, so PostgreSQL, Redis, and document storage cannot be shown healthy. Decision CH-D-0017 says Docker Desktop is not installed without a separate permission. Marketplace screens, persisted bids, and a database restore cannot be completed until this is answered.
+
+Recommended choice:
+A. Yes. Install Docker Desktop and start the local Compose stack.
+
+Available choices:
+
+A. Yes. Install Docker Desktop and start the local Compose stack.
+Effect: The entry gate can be tested against PostgreSQL, Redis, and MinIO. Marketplace implementation can continue after that gate passes.
+
+B. No. Do not install Docker.
+Effect: Marketplace work stays blocked. In-process tests can continue. No database is created.
+
+C. Use a database host I will name in the note below. Do not install Docker Desktop.
+Effect: Work waits until the host and credentials are provided outside the repository.
+
+Default if Michael does not choose:
+Docker is not installed. Milestone 2 does not start. No database is created.
+
+Michael's answer:
+
+Decision recorded:
 
 Answered questions are below. They were answered in writing on 2026-09-30.
 

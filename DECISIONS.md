@@ -339,3 +339,15 @@ Affected modules: git
 Requires later professional review: No
 Supersedes:
 Implementation status: In effect until a later merge is requested
+
+DECISION CH-D-0029
+
+Date: 2026-09-30
+Decided by: Engineering lead
+Question reference: CH-0009
+Decision: The Milestone 2 entry gate failed. Docker, PostgreSQL, Redis, and MinIO are not running. Authentication was absent. Milestone 1 persisted organizations were absent. Marketplace implementation does not start until CH-0009 is answered and the entry gate passes. Reversible marketplace assumptions, if the gate later passes: bid amounts are visible only to the posting shipper and the bidding carrier; a load may be fixed-rate or negotiable; a carrier may revise or withdraw a bid before selection; the first marketplace is public to eligible carriers with no private invitation; sandbox funding must be confirmed before publication; cancellation before equipment assignment keeps the reason, the actor, and the bids.
+Reason: The milestone order forbids starting Marketplace while Milestone 0 or Milestone 1 is unproven, and CH-D-0017 forbids installing Docker without permission.
+Affected modules: milestone scope, server identity, domain qualification
+Requires later professional review: No
+Supersedes:
+Implementation status: In effect. Marketplace screens are not started.

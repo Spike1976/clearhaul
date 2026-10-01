@@ -1,8 +1,42 @@
 using System.Threading.RateLimiting;
 using ClearHaul.Contracts;
+using ClearHaul.Domain.Identity;
+using ClearHaul.Domain.Records;
+using ClearHaul.Server.Identity;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
+var devDirectoryEnabled = builder.Configuration.GetValue("Foundation:DevDirectory", false);
+var devPassword = builder.Configuration["Foundation:DevPassword"];
+var registry = new OrganizationRegistry();
+var audit = new AuditLog();
+if (devDirectoryEnabled)
+{
+    FictionalDirectory.Seed(registry);
+}
+
+builder.Services.AddSingleton(registry);
+builder.Services.AddSingleton(audit);
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.Cookie.Name = "ch.session";
+        options.Cookie.HttpOnly = true;
+        options.Cookie.SameSite = SameSiteMode.Strict;
+        options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
+        options.Events.OnRedirectToLogin = context =>
+        {
+            context.Response.StatusCode = StatusCodes.Status401Unauthorized;
+            return Task.CompletedTask;
+        };
+        options.Events.OnRedirectToAccessDenied = context =>
+        {
+            context.Response.StatusCode = StatusCodes.Status403Forbidden;
+            return Task.CompletedTask;
+        };
+    });
+builder.Services.AddAuthorization();
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Logging.AddFilter("Microsoft.AspNetCore", LogLevel.Warning);
@@ -69,6 +103,10 @@ if (!app.Environment.IsEnvironment("Testing"))
 {
     app.UseRateLimiter();
 }
+
+app.UseAuthentication();
+app.UseAuthorization();
+IdentityEndpoints.Map(app, registry, audit, devDirectoryEnabled, devPassword);
 
 app.MapGet("/health/live", () => Results.Json(new LiveHealthResponse(HealthStatus.Healthy)));
 app.MapGet("/health", () =>

@@ -4,6 +4,9 @@
     "net8.0": {
       "clearhaul.contracts": {
         "type": "Project"
+      },
+      "clearhaul.domain": {
+        "type": "Project"
       }
     }
   }

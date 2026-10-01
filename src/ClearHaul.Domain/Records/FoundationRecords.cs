@@ -25,7 +25,9 @@ public sealed record AuditEvent(
     string? EquipmentId,
     string? DocumentHash,
     string? RuleVersion,
-    string CorrelationId);
+    string CorrelationId,
+    string? PreviousEventHash,
+    string EventHash);
 
 public sealed class AuditLog
 {
@@ -46,6 +48,18 @@ public sealed class AuditLog
         string? ruleVersion,
         string correlationId)
     {
+        var previous = _events.Count == 0 ? null : _events[^1].EventHash;
+        var hash = ContentHash.Sha256(string.Join(
+            "\n",
+            previous ?? "none",
+            actor.UserId,
+            actor.OrganizationId,
+            eventName,
+            originalValue ?? "",
+            newValue ?? "",
+            timestamp.UtcDateTime.ToString("O"),
+            shipmentId ?? "",
+            correlationId));
         var auditEvent = new AuditEvent(
             Guid.NewGuid().ToString("N"),
             actor.UserId,
@@ -61,7 +75,9 @@ public sealed class AuditLog
             equipmentId,
             documentHash,
             ruleVersion,
-            correlationId);
+            correlationId,
+            previous,
+            hash);
         _events.Add(auditEvent);
         return auditEvent;
     }
