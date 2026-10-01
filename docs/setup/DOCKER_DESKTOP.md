@@ -1,8 +1,8 @@
 # Docker Desktop for local ClearHaul development
 
-Decision CH-D-0017 approves Docker Desktop for local PostgreSQL, MinIO, and Redis. Engineering has not installed it. Installing Docker Desktop changes this computer and needs a separate permission.
+Decision CH-D-0017 approves Docker Desktop for local PostgreSQL, MinIO, and Redis. Decision CH-D-0031, recorded 2026-10-01, is Michael Stokes's permission to install Docker Desktop and start the local Compose stack. Installation had not been run when CH-D-0031 was recorded.
 
-Docker was not installed when the foundation was prepared. The compose file can be reviewed before Docker is installed. Do not treat the database as running.
+Docker was not installed when the foundation was prepared. The compose file can be reviewed before Docker is installed. Do not treat the database as running until `docker compose ps` shows the services healthy.
 
 ## Install, when you choose to
 

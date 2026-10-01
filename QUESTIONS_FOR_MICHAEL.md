@@ -11,9 +11,11 @@ Active questions are first.
 
 ## Active questions
 
+None. CH-0009 through CH-0018 were answered in writing on 2026-10-01. The answers are recorded on those questions below.
+
 QUESTION CH-0009
 
-Status: OPEN
+Status: ANSWERED
 Priority: BLOCKING
 Area: Setup
 
@@ -41,12 +43,14 @@ Default if Michael does not choose:
 Docker is not installed. Milestone 2 does not start. No database is created.
 
 Michael's answer:
+A. Yes. Install Docker Desktop and start the local Compose stack.
 
 Decision recorded:
+CH-D-0031. Docker Desktop may be installed, and the local Compose stack may be started. Installation had not been run at the time this answer was recorded.
 
 QUESTION CH-0010
 
-Status: OPEN
+Status: ANSWERED
 Priority: BLOCKING
 Area: Privacy
 
@@ -74,12 +78,14 @@ Default if Michael does not choose:
 No disclosure count is in effect. Protected cargo history stays closed.
 
 Michael's answer:
+A. Ordinarily disclose the previous three cargo records for the assigned trailer.
 
 Decision recorded:
+CH-D-0032. The ordinary disclosure count is three cargo records. CH-0011 limits which three.
 
 QUESTION CH-0011
 
-Status: OPEN
+Status: ANSWERED
 Priority: BLOCKING
 Area: Privacy
 
@@ -107,12 +113,14 @@ Default if Michael does not choose:
 No disclosure window is in effect. Protected cargo history stays closed.
 
 Michael's answer:
+C. Use both: the previous three loads within 90 days. Safety incidents and legally required records follow their longer retention rules.
 
 Decision recorded:
+CH-D-0033. Ordinary disclosure is the previous three loads that also fall within 90 days. This answer does not name a statute or a longer retention period. Those longer rules stay unstated until a written retention schedule names them.
 
 QUESTION CH-0012
 
-Status: OPEN
+Status: ANSWERED
 Priority: BLOCKING
 Area: Safety
 
@@ -140,12 +148,14 @@ Default if Michael does not choose:
 No category raises an automatic warning.
 
 Michael's answer:
+B. Display cargo categories factually. Do not generate automatic safety warnings until a qualified hazmat or food-safety professional approves the warning rules.
 
 Decision recorded:
+CH-D-0034. Disclosed categories are shown as facts. No automatic safety warning is generated. Live hazmat remains disabled.
 
 QUESTION CH-0013
 
-Status: OPEN
+Status: ANSWERED
 Priority: BLOCKING
 Area: Privacy
 
@@ -173,12 +183,14 @@ Default if Michael does not choose:
 No post-delivery access period is in effect. Interactive history access stays closed.
 
 Michael's answer:
+A. Allow access until 72 hours after delivery. Preserve the approval snapshot permanently. Extend controlled access during an authorized dispute.
 
 Decision recorded:
+CH-D-0035. Interactive access lasts until 72 hours after delivery. The approval snapshot is kept. An authorized dispute can extend controlled access. This answer does not define the dispute procedure.
 
 QUESTION CH-0014
 
-Status: OPEN
+Status: ANSWERED
 Priority: BLOCKING
 Area: Operations
 
@@ -206,12 +218,14 @@ Default if Michael does not choose:
 The shipper cannot select a binding cleaning requirement.
 
 Michael's answer:
+C. A shipper can request any cleaning requirement, but it binds the carrier only when the original tender includes it or the carrier accepts it through a written change order.
 
 Decision recorded:
+CH-D-0036. A cleaning request may be recorded. It binds the carrier only from the original tender or a written change order.
 
 QUESTION CH-0015
 
-Status: OPEN
+Status: ANSWERED
 Priority: BLOCKING
 Area: Contract
 
@@ -239,12 +253,14 @@ Default if Michael does not choose:
 A shipper cannot require a specific washout facility.
 
 Michael's answer:
+C. A specific washout facility requires a separate written agreement for that load.
 
 Decision recorded:
+CH-D-0037. Naming a facility does not bind the carrier unless that load has a separate written agreement.
 
 QUESTION CH-0016
 
-Status: OPEN
+Status: ANSWERED
 Priority: BLOCKING
 Area: Contract
 
@@ -272,12 +288,14 @@ Default if Michael does not choose:
 No payer is assigned. The software does not charge either party.
 
 Michael's answer:
+C. The accepted bid or a written change order identifies who pays. The software never assigns a payer on its own.
 
 Decision recorded:
+CH-D-0038. Washout cost responsibility comes from the accepted bid or a written change order. The software does not choose a payer.
 
 QUESTION CH-0017
 
-Status: OPEN
+Status: ANSWERED
 Priority: BLOCKING
 Area: Evidence
 
@@ -305,12 +323,14 @@ Default if Michael does not choose:
 No cleaning record is called verified.
 
 Michael's answer:
+B. Carrier uploads remain carrier declarations until an authorized shipper, a facility integration, or an administrator confirms them.
 
 Decision recorded:
+CH-D-0039. A carrier upload stays a carrier declaration. Confirmation by an authorized shipper, a facility integration, or an administrator is required before the record is called verified. A photograph still does not prove cleanliness.
 
 QUESTION CH-0018
 
-Status: OPEN
+Status: ANSWERED
 Priority: BLOCKING
 Area: Trust
 
@@ -338,8 +358,10 @@ Default if Michael does not choose:
 An equipment rejection does not change the carrier's rating.
 
 Michael's answer:
+C. Trailer rejection can create a report, but any rating penalty requires review. One rejection never automatically changes the carrier's rating.
 
 Decision recorded:
+CH-D-0040. A rejection may create a report. It does not cancel the carrier award. A rating change requires a separate review.
 
 Answered questions are below. They were answered in writing on 2026-09-30.
 
@@ -351,6 +373,8 @@ The blueprint file and the master build prompt were still not in docs\source whe
 Product workflows stay unbuilt until both files are present and have been read.
 
 Later note, 2026-09-30: Decision CH-D-0022 stored the blueprint chat text as docs\source\Project_ClearHaul_Blueprint.md and the master build prompt as docs\source\CLEARHAUL_MASTER_BUILD_PROMPT.md. The .docx binary is still absent. Milestone 2 and Milestone 3 were ordered after that decision. Neither milestone is implemented. See CH-D-0029 and CH-D-0030.
+
+Later note, 2026-10-01: Michael answered CH-0009 through CH-0018. Those answers are CH-D-0031 through CH-D-0040. The master prompt markdown is already in docs\source. The blueprint .docx is still not in docs\source. Milestone 2 waits for a healthy local Compose stack. Milestone 3 waits for Milestone 2.
 
 ## Answered questions
 

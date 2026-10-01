@@ -1,10 +1,10 @@
 # Current status
 
-Date: 2026-09-30
-Current milestone: Milestone 3 entry gate. Equipment assignment is not started.
+Date: 2026-10-01
+Current milestone: Milestone 3 entry gate. Equipment assignment is not started. CH-0009 through CH-0018 are answered.
 Current branch: milestone/m3-entry-gate
 Published repository: https://github.com/Spike1976/clearhaul
-Last completed task: Record the Milestone 3 entry-gate failure. The parent commit on milestone/m1-entry-repair is 0004b29.
+Last completed task: Record Michael Stokes's answers to CH-0009 through CH-0018. The Milestone 3 entry gate still fails.
 
 ## Entry gate
 
@@ -52,9 +52,11 @@ Source backup m3-entry-20260930 was created from commit 305f799 and restored wit
 
 ## Questions
 
-CH-0009 is open. It asks permission to install Docker Desktop.
+CH-0009 through CH-0018 were answered by Michael Stokes on 2026-10-01. The record is CH-D-0031 through CH-D-0040.
 
-CH-0010 through CH-0018 are open. They ask the disclosure count, the disclosure window, automatic cargo warnings, post-delivery access, selectable cleaning requirements, a specific washout facility, washout payment, the meaning of a verified cleaning record, and rating effects. The defaults in the question file are holds. They are not product rules.
+Docker Desktop may be installed. The ordinary history disclosure is the previous three loads within 90 days. Categories are shown as facts, with no automatic safety warning. Interactive history access lasts 72 hours after delivery, and the approval snapshot is kept. A cleaning request binds the carrier only from the original tender or a written change order. A named washout facility needs a separate written agreement for that load. The accepted bid or a written change order names the payer. Carrier cleaning uploads stay carrier declarations until an authorized shipper, a facility integration, or an administrator confirms them. A trailer rejection may create a report and does not by itself change the carrier's rating.
+
+No question is waiting. The longer retention period for safety incidents and legally required records is not named. The dispute procedure that can extend history access is not defined. Live hazmat warning rules still need a qualified reviewer.
 
 ## Tests
 
@@ -63,14 +65,16 @@ See TEST_RESULTS.md.
 ## Defects
 
 - The Milestone 3 entry gate cannot pass until Milestone 2 is persisted and tagged.
-- Docker Desktop is not installed. CH-D-0017 and the open question CH-0009 forbid installing it in this session.
+- Docker Desktop is not installed yet. CH-D-0031 permits the install. It was not run when the answers were recorded.
 - The development authentication directory is for tests and local development. It is not a production sign-in system.
 - No equipment-assignment, protected-history, washout, or approval API exists.
 - Avalonia 12.1.3 still does not compile on this SDK. The client remains on Avalonia 11.3.22.
 
 ## Next task
 
-Wait for Michael's answer to CH-0009. Do not install Docker before that answer. Do not build Milestone 2 or Milestone 3 features before the Milestone 3 entry gate passes. Do not answer CH-0010 through CH-0018 inside the code.
+Install Docker Desktop under CH-D-0031, start Compose, and prove PostgreSQL, Redis, and MinIO healthy. Apply the existing migrations only after that proof. Build Milestone 2 against the database. Milestone 3 stays unstarted until Milestone 2 passes and the tag `clearhaul-m2-marketplace` exists.
+
+The blueprint file `docs\source\Project_ClearHaul_Blueprint.docx` is still absent. `docs\source\CLEARHAUL_MASTER_BUILD_PROMPT.md` is present. Do not push this branch unless Michael asks.
 
 ## Resume
 

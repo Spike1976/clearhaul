@@ -362,4 +362,124 @@ Reason: The milestone order forbids Milestone 3 feature work until Milestones 0,
 Affected modules: milestone scope, equipment assignment, equipment history, cleaning, approval
 Requires later professional review: No
 Supersedes:
-Implementation status: In effect. Equipment-assignment screens and APIs are not started.
+Implementation status: In effect. Equipment-assignment screens and APIs are not started. The open-question holds in this decision are superseded by CH-D-0031 through CH-D-0040. The gate failure remains in effect until Milestone 2 passes.
+
+DECISION CH-D-0031
+
+Date: 2026-10-01
+Decided by: Michael Stokes
+Question reference: CH-0009
+Decision: Choice A. Docker Desktop may be installed, and the local Compose stack for PostgreSQL, Redis, and MinIO may be started.
+Reason: Michael answered the blocking setup question in writing.
+Affected modules: local development environment
+Requires later professional review: No
+Supersedes: the install hold in CH-D-0017 and the unanswered state of CH-0009 in CH-D-0029
+Implementation status: In effect. Docker had not been installed when this decision was recorded.
+
+DECISION CH-D-0032
+
+Date: 2026-10-01
+Decided by: Michael Stokes
+Question reference: CH-0010
+Decision: Choice A. The ordinary disclosure for an assigned trailer is the previous three cargo records.
+Reason: Michael set the disclosure count in writing.
+Affected modules: protected equipment history
+Requires later professional review: No
+Supersedes: the unset-count hold in CH-D-0030
+Implementation status: In effect as a rule. The disclosure workflow is not built.
+
+DECISION CH-D-0033
+
+Date: 2026-10-01
+Decided by: Michael Stokes
+Question reference: CH-0011
+Decision: Choice C. Ordinary disclosure is the previous three loads within 90 days. Safety incidents and legally required records follow their longer retention rules.
+Reason: Michael chose both a load count and a time period, and he kept longer retention for safety incidents and legally required records.
+Affected modules: protected equipment history, retention
+Requires later professional review: Yes. The longer retention periods are not named. Do not invent a statute or a day count for them.
+Supersedes: the unset-window hold in CH-D-0030
+Implementation status: In effect as a rule. The disclosure workflow is not built.
+
+DECISION CH-D-0034
+
+Date: 2026-10-01
+Decided by: Michael Stokes
+Question reference: CH-0012
+Decision: Choice B. Cargo categories are displayed as facts. Automatic safety warnings stay off until a qualified hazmat or food-safety professional approves the warning rules.
+Reason: Michael refused automatic warnings without that professional approval.
+Affected modules: cargo history, hazmat boundary
+Requires later professional review: Yes. Warning rules need a qualified hazmat or food-safety reviewer.
+Supersedes: the warning hold in CH-D-0030
+Implementation status: In effect. No automatic warning is implemented. Live hazmat stays disabled.
+
+DECISION CH-D-0035
+
+Date: 2026-10-01
+Decided by: Michael Stokes
+Question reference: CH-0013
+Decision: Choice A. The selected shipper may access the assigned trailer's disclosed history until 72 hours after delivery. The approval snapshot is preserved. Controlled access may be extended during an authorized dispute.
+Reason: Michael set the post-delivery access period and required the snapshot to remain.
+Affected modules: protected equipment history, disclosure snapshots
+Requires later professional review: No. The dispute procedure itself is not defined by this decision.
+Supersedes: the unset access-period hold in CH-D-0030
+Implementation status: In effect as a rule. Access control is not built.
+
+DECISION CH-D-0036
+
+Date: 2026-10-01
+Decided by: Michael Stokes
+Question reference: CH-0014
+Decision: Choice C. A shipper may request any cleaning requirement. The requirement binds the carrier only when the original tender includes it or the carrier accepts it through a written change order.
+Reason: Michael allowed the request and limited when it becomes an obligation.
+Affected modules: cleaning requirements, load tender, change orders
+Requires later professional review: No
+Supersedes: the closed-selection hold in CH-D-0030
+Implementation status: In effect as a rule. Cleaning requests are not built.
+
+DECISION CH-D-0037
+
+Date: 2026-10-01
+Decided by: Michael Stokes
+Question reference: CH-0015
+Decision: Choice C. A specific washout facility requires a separate written agreement for that load.
+Reason: Michael required a load-specific written agreement before a named facility binds the carrier.
+Affected modules: cleaning requirements
+Requires later professional review: No
+Supersedes: the facility hold in CH-D-0030
+Implementation status: In effect as a rule. Facility agreements are not built.
+
+DECISION CH-D-0038
+
+Date: 2026-10-01
+Decided by: Michael Stokes
+Question reference: CH-0016
+Decision: Choice C. The accepted bid or a written change order identifies who pays for a washout requested after carrier selection. The software does not assign a payer.
+Reason: Michael kept cost responsibility in the bid or change order.
+Affected modules: cleaning requirements, bids, change orders
+Requires later professional review: No
+Supersedes: the unset-payer hold in CH-D-0030
+Implementation status: In effect. The software does not choose a washout payer.
+
+DECISION CH-D-0039
+
+Date: 2026-10-01
+Decided by: Michael Stokes
+Question reference: CH-0017
+Decision: Choice B. A carrier cleaning upload remains a carrier declaration until an authorized shipper, a facility integration, or an administrator confirms it.
+Reason: Michael defined who may move a cleaning record from carrier-declared to confirmed.
+Affected modules: cleaning evidence, verification labels
+Requires later professional review: No
+Supersedes: the unused-verified-label hold in CH-D-0030
+Implementation status: In effect as a rule. Document upload and confirmation are not built. A photograph is supporting evidence and is not a cleanliness proof.
+
+DECISION CH-D-0040
+
+Date: 2026-10-01
+Decided by: Michael Stokes
+Question reference: CH-0018
+Decision: Choice C. A trailer rejection may create a report. Any rating penalty requires a separate review. One rejection does not automatically change the carrier's rating, cancel the award, or suspend the carrier.
+Reason: Michael allowed a report and required review before a rating penalty.
+Affected modules: equipment rejection, ratings, enforcement
+Requires later professional review: No
+Supersedes: the rating hold in CH-D-0030
+Implementation status: In effect. Rejection does not change a rating. The report workflow is not built.
