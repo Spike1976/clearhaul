@@ -2,12 +2,14 @@
 
 Date: 2026-09-30
 
-Milestone 2 was not started. The entry gate failed because Docker, PostgreSQL, Redis, and MinIO are not available. CH-D-0017 still forbids installing Docker without permission. CH-0009 asks for that permission and is open in Notepad.
+Milestone 3 was requested and was not started. The entry gate requires Milestones 0, 1, and 2 to pass first. Milestone 2 was never started. Docker is not installed. PostgreSQL, Redis, and MinIO are not running. `git tag -l` has no `clearhaul-m2-marketplace` tag. No Milestone 2 backup exists.
 
-Branch `milestone/m1-entry-repair` adds an in-memory organization registry, qualification rules, an audit hash chain, and test-host sign-in. The development directory is off unless `Foundation:DevDirectory` is true. Health routes are unchanged.
+Branch `milestone/m3-entry-gate` records that failure. It was created from `milestone/m1-entry-repair` at 0004b29. That parent adds an in-memory organization registry, qualification rules, an audit hash chain, and test-host sign-in. The development directory is off unless `Foundation:DevDirectory` is true. Health routes are unchanged. The server has no equipment-assignment routes.
 
-Backup m1-entry-20260930 was created before those edits and restored with exit code 0. It has no database.
+CH-0009 is open in Notepad and still asks permission to install Docker Desktop. CH-0010 through CH-0018 are open. They cover disclosure count and window, automatic cargo warnings, post-delivery access, cleaning selection, a named washout facility, who pays for a post-selection washout, what makes a cleaning record verified, and when a rejection may affect a rating. Do not invent those answers.
 
-The public `main` branch was not updated. No milestone tag was created.
+Backup m1-entry-20260930 was created before the identity edits and restored with exit code 0. It has no database. A Milestone 3 entry backup is recorded in BACKUP_LOG.md when this handoff says it has been verified.
 
-Next session: read CH-0009. If the answer is no, leave Marketplace unstarted. If the answer is yes, install Docker Desktop, prove Compose, apply the migrations, and only then implement Marketplace.
+The public `main` branch was not updated. No milestone tag was created. Specialists were not assigned feature work because the entry gate failed.
+
+Next session: read CH-0009. If the answer is no, leave Marketplace and equipment assignment unstarted. If the answer is yes, install Docker Desktop, prove Compose, apply the migrations, build and prove Milestone 2, and only then implement Milestone 3. Written answers to CH-0010 through CH-0018 are required before any privacy, contract, or cost rule is coded.

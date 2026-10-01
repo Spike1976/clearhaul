@@ -6,6 +6,10 @@ This document records the foundation and the Phase Zero domain library. It does 
 
 The governing product text is `docs/source/Project_ClearHaul_Blueprint.md`. Decision CH-D-0023 keeps the existing .NET 8 stack.
 
+## Current record, 2026-09-30
+
+Milestone 3 was not started. The entry gate failed. See CURRENT_STATUS.md and CH-D-0030. The server references the domain library for the development identity directory. There is no equipment-assignment HTTP API and no persisted marketplace. Where an older paragraph below disagrees with CURRENT_STATUS.md, CURRENT_STATUS.md is the current record.
+
 ## Domain library
 
 Status: present for in-process rules. Partial as a product, because nothing is persisted and no shipment route exists.

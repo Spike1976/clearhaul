@@ -351,3 +351,15 @@ Affected modules: milestone scope, server identity, domain qualification
 Requires later professional review: No
 Supersedes:
 Implementation status: In effect. Marketplace screens are not started.
+
+DECISION CH-D-0030
+
+Date: 2026-09-30
+Decided by: Engineering lead
+Question reference: CH-0009, CH-0010, CH-0011, CH-0012, CH-0013, CH-0014, CH-0015, CH-0016, CH-0017, CH-0018
+Decision: The Milestone 3 entry gate failed. Milestone 3 equipment assignment, protected history, washout, and approval are not started. Docker is not installed. PostgreSQL, Redis, and MinIO are not running. Marketplace search, carrier bidding, conditional selection, funding, and EQUIPMENT_ASSIGNMENT_PENDING are not persisted. The tag clearhaul-m2-marketplace does not exist. No Milestone 2 backup exists. Questions CH-0010 through CH-0018 stay open. Their defaults are holds: no disclosure count, no disclosure window, no automatic cargo warning, no post-delivery access period, no binding cleaning requirement, no required washout facility, no washout payer, no verified cleaning label, and no rating change from a trailer rejection. Those holds are not product rules.
+Reason: The milestone order forbids Milestone 3 feature work until Milestones 0, 1, and 2 pass, and it forbids inventing privacy, contract, and cost answers.
+Affected modules: milestone scope, equipment assignment, equipment history, cleaning, approval
+Requires later professional review: No
+Supersedes:
+Implementation status: In effect. Equipment-assignment screens and APIs are not started.

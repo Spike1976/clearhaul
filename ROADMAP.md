@@ -1,6 +1,12 @@
 # Roadmap
 
-Source: `docs/source/ENGINEERING_OPERATING_ORDER.md`. The blueprint and the master build prompt were not supplied. This list does not invent product behavior.
+Source: `docs/source/ENGINEERING_OPERATING_ORDER.md`. The blueprint and the master build prompt were later stored as Markdown under `docs/source`. This list does not invent product behavior.
+
+## Milestone order status, 2026-09-30
+
+Milestone 0 is the published foundation. Phase Zero is a local in-process domain library. Milestone 2 Marketplace was requested and was not started (CH-D-0029). Milestone 3 equipment assignment was requested and was not started (CH-D-0030). The tags `clearhaul-m2-marketplace` and `clearhaul-m3-equipment-approval` do not exist.
+
+The numbered list below is the original operating-order dependency list. It is not the later milestone numbering.
 
 The operating order's first assignment is the foundation checkpoint. That assignment is not a future milestone. This file does not mark the foundation complete. Server and client status is in `ARCHITECTURE.md`.
 

@@ -44,6 +44,303 @@ Michael's answer:
 
 Decision recorded:
 
+QUESTION CH-0010
+
+Status: OPEN
+Priority: BLOCKING
+Area: Privacy
+
+Plain-language question:
+How many prior cargo records should ordinarily be disclosed for an assigned trailer?
+
+Why this matters:
+The shipper may see safety-relevant history only after conditional selection and trailer assignment. A count that is too small can hide a relevant prior load. A count that is too large can expose more of the carrier's history than the privacy rule allows. This count is not chosen in the milestone order.
+
+Recommended choice:
+Leave the count unset until you write it here.
+
+Available choices:
+
+A. I will write the ordinary number of prior records in the note below.
+Effect: Disclosure uses that count after the entry gate passes.
+
+B. Disclose every stored record inside the review window, with no separate count.
+Effect: The time or load window in CH-0011 becomes the only limit.
+
+C. Do not disclose prior cargo records until a later written rule.
+Effect: Assignment can be designed later, and cargo-history disclosure stays closed.
+
+Default if Michael does not choose:
+No disclosure count is in effect. Protected cargo history stays closed.
+
+Michael's answer:
+
+Decision recorded:
+
+QUESTION CH-0011
+
+Status: OPEN
+Priority: BLOCKING
+Area: Privacy
+
+Plain-language question:
+Should the disclosure period use a number of loads, a time period, or both?
+
+Why this matters:
+The review window decides which history the selected shipper can see. Choosing loads, time, or both changes what is private. The milestone order asks this and does not answer it.
+
+Recommended choice:
+Leave the window unset until you write it here.
+
+Available choices:
+
+A. Use a number of loads. I will write the number below.
+Effect: Older loads outside that count stay hidden.
+
+B. Use a time period. I will write the period below.
+Effect: Records outside that period stay hidden.
+
+C. Use both a load count and a time period. I will write both below.
+Effect: A record is disclosed only when it falls inside both limits.
+
+Default if Michael does not choose:
+No disclosure window is in effect. Protected cargo history stays closed.
+
+Michael's answer:
+
+Decision recorded:
+
+QUESTION CH-0012
+
+Status: OPEN
+Priority: BLOCKING
+Area: Safety
+
+Plain-language question:
+Which cargo categories require an automatic warning to the shipper?
+
+Why this matters:
+An automatic warning treats some prior cargo as safety-relevant without a person deciding load by load. The wrong list warns on ordinary freight or stays silent on freight you want called out. The milestone order names a starting taxonomy and does not say which categories warn automatically.
+
+Recommended choice:
+Leave automatic warnings off until you name the categories.
+
+Available choices:
+
+A. I will list the categories that must warn automatically.
+Effect: Those categories can raise a warning after you name them. Other categories stay factual records.
+
+B. Do not warn automatically. Show the disclosed categories and let the shipper read them.
+Effect: The screen shows categories, confidence, and dispute status. It does not add an automatic warning.
+
+C. Warn on every disclosed category.
+Effect: Every prior category in the disclosure is marked as a warning.
+
+Default if Michael does not choose:
+No category raises an automatic warning.
+
+Michael's answer:
+
+Decision recorded:
+
+QUESTION CH-0013
+
+Status: OPEN
+Priority: BLOCKING
+Area: Privacy
+
+Plain-language question:
+How long may the shipper access the assigned trailer's history after delivery?
+
+Why this matters:
+Access that continues after delivery can expose history during a dispute. Access that ends too soon can block a legitimate review. The milestone order asks for the duration and does not set it.
+
+Recommended choice:
+Leave the duration unset until you write it here.
+
+Available choices:
+
+A. I will write the duration below.
+Effect: Interactive access ends at that time. The approval snapshot remains in the audit record.
+
+B. Access ends at delivery.
+Effect: Post-delivery review requires a separate administrative grant.
+
+C. Access remains for an authorized dispute and has no ordinary calendar limit.
+Effect: A dispute process must exist before this choice can be enforced.
+
+Default if Michael does not choose:
+No post-delivery access period is in effect. Interactive history access stays closed.
+
+Michael's answer:
+
+Decision recorded:
+
+QUESTION CH-0014
+
+Status: OPEN
+Priority: BLOCKING
+Area: Operations
+
+Plain-language question:
+Which cleaning requirements may the shipper select?
+
+Why this matters:
+The milestone order names candidate requirements, including sweep-out, washout, sanitization, allergen, kosher, halal, pharmaceutical, and customer-specific work. It does not say which of those a shipper may impose on a conditionally selected carrier.
+
+Recommended choice:
+Leave shipper selection closed until you name the allowed requirements.
+
+Available choices:
+
+A. The shipper may select any requirement named in the Milestone 3 order.
+Effect: The named list becomes the shipper's selectable set after you confirm this choice.
+
+B. I will write a shorter allowed list below.
+Effect: Only the written list can be selected.
+
+C. The shipper may state a requirement, and a person must review it before it binds the carrier.
+Effect: Nothing in the list binds the carrier automatically.
+
+Default if Michael does not choose:
+The shipper cannot select a binding cleaning requirement.
+
+Michael's answer:
+
+Decision recorded:
+
+QUESTION CH-0015
+
+Status: OPEN
+Priority: BLOCKING
+Area: Contract
+
+Plain-language question:
+May a shipper require a specific washout facility?
+
+Why this matters:
+A named facility changes the carrier's obligation and may change price and schedule. The milestone order allows a required facility type and asks whether a specific facility may be required. It does not answer that.
+
+Recommended choice:
+Leave specific-facility requirements unavailable until you answer.
+
+Available choices:
+
+A. Yes. The shipper may name a specific facility.
+Effect: The carrier must use that facility when the requirement is accepted.
+
+B. No. The shipper may name a facility type only.
+Effect: The carrier chooses a facility of that type.
+
+C. A specific facility requires a separate written agreement for that load.
+Effect: The load screen can record the request. It does not bind the carrier by itself.
+
+Default if Michael does not choose:
+A shipper cannot require a specific washout facility.
+
+Michael's answer:
+
+Decision recorded:
+
+QUESTION CH-0016
+
+Status: OPEN
+Priority: BLOCKING
+Area: Contract
+
+Plain-language question:
+Who pays for a washout requested after the carrier is conditionally selected?
+
+Why this matters:
+This assigns a cost. The milestone order says cost responsibility must not be decided without an approved rule or agreement. No agreement is on file.
+
+Recommended choice:
+Leave the payer unset until you write the rule.
+
+Available choices:
+
+A. The shipper pays.
+Effect: The load records the shipper as the payer for a post-selection washout.
+
+B. The carrier pays.
+Effect: The load records the carrier as the payer for a post-selection washout.
+
+C. The accepted bid, or a later written agreement, names the payer. Until then, nobody is charged in the software.
+Effect: The software stores the request and does not assign a payer.
+
+Default if Michael does not choose:
+No payer is assigned. The software does not charge either party.
+
+Michael's answer:
+
+Decision recorded:
+
+QUESTION CH-0017
+
+Status: OPEN
+Priority: BLOCKING
+Area: Evidence
+
+Plain-language question:
+What evidence is required before a cleaning record is called verified?
+
+Why this matters:
+Calling a record verified tells the shipper that someone other than the carrier has confirmed it. A receipt, a photograph, or a carrier statement is not that confirmation unless you say so. The milestone order forbids treating a carrier declaration as independent verification, and it forbids a photograph from proving cleanliness.
+
+Recommended choice:
+Leave the verified label unused until you name the evidence.
+
+Available choices:
+
+A. I will write the required evidence below.
+Effect: The verified label is available only when that evidence is present and a person confirms it.
+
+B. A carrier upload stays a carrier declaration. An authorized shipper or administrator must confirm it before it is called verified.
+Effect: Uploads keep the carrier-declared confidence until that confirmation.
+
+C. Do not use a verified label in this milestone.
+Effect: Records show source and confidence. They do not say verified.
+
+Default if Michael does not choose:
+No cleaning record is called verified.
+
+Michael's answer:
+
+Decision recorded:
+
+QUESTION CH-0018
+
+Status: OPEN
+Priority: BLOCKING
+Area: Trust
+
+Plain-language question:
+When may an equipment rejection affect the carrier's rating?
+
+Why this matters:
+A rating change is a penalty. The milestone order says rejecting one trailer must not cancel the award, suspend the carrier, or create a negative rating by itself. It still asks when a rejection may affect a rating later.
+
+Recommended choice:
+Leave rating effects off until you write the rule.
+
+Available choices:
+
+A. A single trailer rejection never affects the rating.
+Effect: Rejection stays on the load record. The rating does not change.
+
+B. I will write the conditions below.
+Effect: A rating change can be built only for those conditions.
+
+C. Any rating effect requires a separate enforcement review.
+Effect: Rejection can open a report. It does not change a rating by itself.
+
+Default if Michael does not choose:
+An equipment rejection does not change the carrier's rating.
+
+Michael's answer:
+
+Decision recorded:
+
 Answered questions are below. They were answered in writing on 2026-09-30.
 
 The blueprint file and the master build prompt were still not in docs\source when these answers were recorded. Their required names are:
@@ -52,6 +349,8 @@ The blueprint file and the master build prompt were still not in docs\source whe
 - docs\source\CLEARHAUL_MASTER_BUILD_PROMPT.md
 
 Product workflows stay unbuilt until both files are present and have been read.
+
+Later note, 2026-09-30: Decision CH-D-0022 stored the blueprint chat text as docs\source\Project_ClearHaul_Blueprint.md and the master build prompt as docs\source\CLEARHAUL_MASTER_BUILD_PROMPT.md. The .docx binary is still absent. Milestone 2 and Milestone 3 were ordered after that decision. Neither milestone is implemented. See CH-D-0029 and CH-D-0030.
 
 ## Answered questions
 
