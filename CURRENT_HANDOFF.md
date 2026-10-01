@@ -8,7 +8,7 @@ The blueprint and master build prompt are not in `docs/source`. Product workflow
 
 Specialists who finished documents: architect, compliance, open-source governance, payment boundary, XRP Ledger boundary, and the test plan. The server, client, backup, and security implementation agents were stopped because they had not produced a buildable result. The integrator wrote those parts and labeled them as integrator work. Do not describe those agents as if they finished the code.
 
-The Release suite passed: 16 tests, 0 failed. Docker was not started. The window was not click-tested.
+The Release suite passed: 16 tests, 0 failed. Backup m0-foundation-20260930 restored with matching README.md hashes. Docker was not started. The window was not click-tested.
 
 Next session: confirm the GitHub push, confirm BACKUP_LOG.md shows a restore, and wait for the two source documents before any workflow design.
 

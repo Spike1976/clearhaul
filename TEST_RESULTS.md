@@ -16,7 +16,7 @@ The server tests use the in-process test host. They do not prove a listening pro
 
 The client tests call `ServerHealthClient` with a stub handler. They do not click the window.
 
-The backup tests use a temporary directory and an in-memory key. They do not by themselves prove a restore of this repository. That restore is recorded in BACKUP_LOG.md when it has been run.
+The backup tests use a temporary directory and an in-memory key. A separate restore of this repository succeeded. See BACKUP_LOG.md entry m0-foundation-20260930. README.md hashes matched. Create and restore command exit codes were 0.
 
 The secret scan found no private-key block, Amazon-style access-key prefix, or certificate file in the tree it read. It does not scan ignored build output.
 

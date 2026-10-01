@@ -3,8 +3,8 @@
 Date: 2026-09-30
 Current milestone: foundation checkpoint, not a finished product milestone
 Current branch: milestone/m0-foundation
-Latest commit: recorded after this file is committed
-Last completed task: Release test suite passed. Repository restore is the next proof.
+Latest code commit: 0bcd526ae17181516be8199f36327b21d508ed4e
+Last completed task: Encrypted repository backup restored and verified.
 
 ## Counts
 
@@ -83,7 +83,7 @@ No legal rule is encoded. The first live pilot boundary is nonhazardous domestic
 ## Backup
 
 Local destination: `C:\Users\17402\ClearHaul-Backups`
-Repository restore: see BACKUP_LOG.md
+Repository restore: succeeded for backup m0-foundation-20260930. README.md hashes matched. Details are in BACKUP_LOG.md.
 Off-computer copy: not configured
 
 ## Next task
