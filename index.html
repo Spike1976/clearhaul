@@ -22,7 +22,7 @@
       <span></span><span></span><span></span><span class="sr-only">Open navigation</span>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation" data-nav>
-      <a href="#system">The system</a><a href="#workflow">How it works</a><a href="#trust">Trust layer</a><a href="#roadmap">Roadmap</a>
+      <a href="#system">The system</a><a href="#payments">Payments</a><a href="#tracking">Tracking</a><a href="#trust">Trust</a>
       <a class="nav-cta" href="https://github.com/Spike1976/clearhaul">View source <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
@@ -85,8 +85,66 @@
       </div>
     </section>
 
+    <section class="payment-engine" id="payments">
+      <header class="section-head reveal">
+        <p class="section-label">03 · PROTECTED PAYMENT RAIL</p>
+        <h2>Fund once.<br><em>Release by proof.</em></h2>
+        <p>A licensed marketplace payment partner holds and moves the money. ClearHaul supplies the verified milestones, release instructions and permanent receipt trail.</p>
+      </header>
+      <div class="payment-stage reveal">
+        <div class="payment-visual">
+          <div class="wallet shipper-wallet"><small>SHIPPER WALLET</small><strong>$2,740.00</strong><span>Funds verified</span></div>
+          <div class="payment-rail" aria-hidden="true"><i></i><b>PROTECTED</b></div>
+          <div class="wallet carrier-wallet"><small>CARRIER PAYOUT</small><strong data-payout-state>Scheduled</strong><span data-payout-note>Automatic at verified delivery</span></div>
+        </div>
+        <div class="release-console">
+          <div class="console-title"><div><span>RELEASE INSTRUCTION</span><strong>Shipper chooses the earliest release point</strong></div><b>CH-1048</b></div>
+          <div class="release-options" role="radiogroup" aria-label="Example payment release timing">
+            <button type="button" role="radio" aria-checked="false" data-release="pickup" data-state="Released early" data-note="Released after verified pickup">After verified pickup<small>Reward trusted carriers immediately</small></button>
+            <button type="button" role="radio" aria-checked="false" data-release="transit" data-state="Released in transit" data-note="Released after verified route milestone">During verified transit<small>Release at an agreed route milestone</small></button>
+            <button type="button" role="radio" aria-checked="true" data-release="delivery" data-state="Scheduled" data-note="Automatic at verified delivery">At verified delivery<small>Default protection for both parties</small></button>
+          </div>
+          <div class="release-rule"><span>NON-NEGOTIABLE RULE</span><strong>Once delivery is verified, earned freight payment cannot be held hostage.</strong><p>A documented exception can open a separate dispute or claim. It does not silently freeze the carrier's undisputed payment.</p></div>
+        </div>
+      </div>
+      <div class="rating-logic reveal">
+        <div><span class="logic-icon">★</span><h3>Ratings influence trust—not ownership of earned money.</h3></div>
+        <p>Strong performance can unlock earlier release, higher load limits and fewer manual reviews. Repeated verified failures can reduce access or remove a party from ClearHaul. A bad rating alone never cancels payment for a completed load.</p>
+      </div>
+    </section>
+
+    <section class="tracking-engine" id="tracking">
+      <div class="tracking-copy reveal">
+        <p class="section-label light">04 · CHAIN OF CUSTODY</p>
+        <h2>Know the load.<br>Know the truck.<br><em>Know the destination.</em></h2>
+        <p>Tracking is not just a moving dot. ClearHaul links the freight, trailer, seal, driver, route, documents and destination into one evidence chain.</p>
+        <div class="tracking-rules">
+          <article><span>01</span><div><h3>Identity at every handoff</h3><p>Authorized shipper, driver and receiver confirmations are attached to the load record.</p></div></article>
+          <article><span>02</span><div><h3>Location with context</h3><p>GPS, geofences and planned-route exceptions explain where the freight is and whether the movement makes sense.</p></div></article>
+          <article><span>03</span><div><h3>Proof at the destination</h3><p>Receiver code, geofence, seal status, timestamp and delivery documents must agree before final completion.</p></div></article>
+        </div>
+      </div>
+      <div class="tracking-console reveal" aria-label="Example live shipment tracking">
+        <header><div><span>LIVE CHAIN OF CUSTODY</span><strong>CH-1048 · Columbus to Charlotte</strong></div><b><i></i> TRACKING</b></header>
+        <div class="tracker-map">
+          <div class="route-path" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+          <span class="origin-node">PICKUP<br><b>VERIFIED</b></span>
+          <span class="truck-node">702</span>
+          <span class="destination-node">DELIVERY<br><b>GEOFENCE READY</b></span>
+          <div class="tracker-stats"><span><small>LIVE POSITION</small><strong>I-77 S · MM 48</strong></span><span><small>NEXT CHECK</small><strong>12 min</strong></span><span><small>ETA</small><strong>08:42</strong></span></div>
+        </div>
+        <div class="custody-grid">
+          <article class="passed"><span>✓</span><div><small>TRAILER</small><strong>TR-8821 matched</strong></div></article>
+          <article class="passed"><span>✓</span><div><small>SEAL</small><strong>884120 intact</strong></div></article>
+          <article class="passed"><span>✓</span><div><small>DRIVER</small><strong>Assignment verified</strong></div></article>
+          <article class="pending"><span>4</span><div><small>DELIVERY</small><strong>Receiver proof pending</strong></div></article>
+        </div>
+        <div class="exception-bar"><span>ROUTE EXCEPTION ENGINE</span><b>No unexplained deviation detected</b></div>
+      </div>
+    </section>
+
     <section class="workflow" id="workflow">
-      <header class="section-head reveal"><p class="section-label">03 · THE FREIGHT FLOW</p><h2>Six gates.<br><em>Zero guesswork.</em></h2><p>ClearHaul separates carrier selection, equipment approval, movement and payment so each party knows exactly what was agreed and what comes next.</p></header>
+      <header class="section-head reveal"><p class="section-label">05 · THE FREIGHT FLOW</p><h2>Six gates.<br><em>Zero guesswork.</em></h2><p>ClearHaul separates carrier selection, equipment approval, movement and payment so each party knows exactly what was agreed and what comes next.</p></header>
       <div class="steps">
         <article class="reveal"><b>01</b><span>POST</span><h3>Standardize the load</h3><p>The shipper enters locations, freight, timing, equipment, pricing and compliance information in one format.</p></article>
         <article class="reveal"><b>02</b><span>PROTECT</span><h3>Fund before award</h3><p>Money is confirmed through a regulated payment partner before a carrier commits equipment.</p></article>
@@ -98,7 +156,7 @@
     </section>
 
     <section class="roles" aria-labelledby="roles-title">
-      <header class="section-head reveal"><p class="section-label light">04 · BUILT FOR THE WHOLE LOAD</p><h2 id="roles-title">Three workspaces.<br><em>One shared truth.</em></h2></header>
+      <header class="section-head reveal"><p class="section-label light">06 · BUILT FOR THE WHOLE LOAD</p><h2 id="roles-title">Three workspaces.<br><em>One shared truth.</em></h2></header>
       <div class="role-tabs reveal" role="tablist" aria-label="ClearHaul workspaces">
         <button role="tab" aria-selected="true" aria-controls="shipper-panel" id="shipper-tab" data-tab="shipper">01 Shipper</button>
         <button role="tab" aria-selected="false" aria-controls="carrier-panel" id="carrier-tab" data-tab="carrier" tabindex="-1">02 Carrier</button>
@@ -113,7 +171,7 @@
 
     <section class="trust" id="trust">
       <div class="trust-copy reveal">
-        <p class="section-label light">05 · PRIVACY WITH PROOF</p><h2>Open rules.<br><em>Protected freight.</em></h2><p>ClearHaul makes the system inspectable without turning private rates, identities or shipment details into public blockchain graffiti.</p>
+        <p class="section-label light">07 · PRIVACY WITH PROOF</p><h2>Open rules.<br><em>Protected freight.</em></h2><p>ClearHaul makes the system inspectable without turning private rates, identities or shipment details into public blockchain graffiti.</p>
         <div class="trust-list"><article><b>01</b><div><h3>Operational data stays private</h3><p>Rates, documents, identities and trailer records remain access-controlled.</p></div></article><article><b>02</b><div><h3>History is append-only</h3><p>A correction creates a linked event instead of replacing the past.</p></div></article><article><b>03</b><div><h3>Proof can be independently checked</h3><p>Batched fingerprints may be anchored to XRPL without exposing the underlying load.</p></div></article></div>
       </div>
       <div class="verify-card reveal">
@@ -125,19 +183,19 @@
     </section>
 
     <section class="equipment">
-      <header class="section-head reveal"><p class="section-label">06 · EQUIPMENT PRIVACY</p><h2>Inspect the assigned trailer.<br><em>Not the carrier's whole fleet.</em></h2></header>
+      <header class="section-head reveal"><p class="section-label">08 · EQUIPMENT PRIVACY</p><h2>Inspect the assigned trailer.<br><em>Not the carrier's whole fleet.</em></h2></header>
       <div class="equipment-track reveal"><article class="complete"><span>1</span><div><strong>Carrier selected</strong><small>No equipment history access</small></div></article><article class="active"><span>2</span><div><strong>Trailer assigned</strong><small>Relevant history unlocks</small></div></article><article><span>3</span><div><strong>Shipper decides</strong><small>Accept, wash out or replace</small></div></article><article><span>4</span><div><strong>Snapshot preserved</strong><small>Approval becomes evidence</small></div></article></div>
       <p class="equipment-note reveal">Previous customers, rates, routes and proprietary commodities stay protected. The shipper sees only what is needed to evaluate sanitation, compatibility and suitability for the current freight.</p>
     </section>
 
     <section class="roadmap" id="roadmap">
-      <header class="section-head reveal"><p class="section-label light">07 · THE BUILD</p><h2>Build the engine.<br><em>Earn the network.</em></h2></header>
+      <header class="section-head reveal"><p class="section-label light">09 · THE BUILD</p><h2>Build the engine.<br><em>Earn the network.</em></h2></header>
       <ol class="roadmap-list"><li class="reveal"><b>00</b><div><span>FOUNDATION</span><h3>Identity, organizations, roles, permissions and audit model</h3></div><small>CORE</small></li><li class="reveal"><b>01</b><div><span>VERIFY</span><h3>Shippers, carriers, drivers, equipment, authority and insurance</h3></div><small>TRUST</small></li><li class="reveal"><b>02</b><div><span>MATCH</span><h3>Standard tenders, funded loads, bidding and selection</h3></div><small>MARKET</small></li><li class="reveal"><b>03</b><div><span>APPROVE</span><h3>Trailer history, washouts, substitution and evidence</h3></div><small>EQUIPMENT</small></li><li class="reveal"><b>04</b><div><span>MOVE</span><h3>Offline packet, detention, transit, delivery and documents</h3></div><small>DRIVER</small></li><li class="reveal"><b>05+</b><div><span>PROVE & SCALE</span><h3>Audit anchoring, disputes, hazmat and controlled expansion</h3></div><small>NETWORK</small></li></ol>
     </section>
 
     <section class="open-source">
       <div class="code-mark" aria-hidden="true">{ }</div>
-      <div class="source-copy reveal"><p class="section-label">08 · BUILT IN THE OPEN</p><h2>Trust should be<br><em>inspectable.</em></h2><p>ClearHaul's core rules, calculations, audit format and verification tools are designed to be open source. Private shipment data remains private.</p></div>
+      <div class="source-copy reveal"><p class="section-label">10 · BUILT IN THE OPEN</p><h2>Trust should be<br><em>inspectable.</em></h2><p>ClearHaul's core rules, calculations, audit format and verification tools are designed to be open source. Private shipment data remains private.</p></div>
       <div class="source-grid reveal"><span>Published rules</span><span>Versioned decisions</span><span>Reproducible math</span><span>Independent verification</span></div>
     </section>
 

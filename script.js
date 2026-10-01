@@ -46,6 +46,32 @@ tabs.forEach((tab, index) => {
   });
 });
 
+const releaseOptions = [...document.querySelectorAll('[data-release]')];
+const payoutState = document.querySelector('[data-payout-state]');
+const payoutNote = document.querySelector('[data-payout-note]');
+
+function selectRelease(option) {
+  releaseOptions.forEach((button) => {
+    const selected = button === option;
+    button.setAttribute('aria-checked', String(selected));
+    button.tabIndex = selected ? 0 : -1;
+  });
+  if (payoutState) payoutState.textContent = option.dataset.state;
+  if (payoutNote) payoutNote.textContent = option.dataset.note;
+}
+
+releaseOptions.forEach((option, index) => {
+  option.addEventListener('click', () => selectRelease(option));
+  option.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) return;
+    event.preventDefault();
+    const forward = ['ArrowRight', 'ArrowDown'].includes(event.key);
+    const next = releaseOptions[(index + (forward ? 1 : -1) + releaseOptions.length) % releaseOptions.length];
+    selectRelease(next);
+    next.focus();
+  });
+});
+
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape' && nav?.classList.contains('open')) {
     nav.classList.remove('open');
