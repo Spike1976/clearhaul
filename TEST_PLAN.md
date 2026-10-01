@@ -89,9 +89,17 @@ These checks are not possible yet. They are not planned tests, and this file doe
 | TLS | The foundation process listens on http://127.0.0.1:5080 only. It does not terminate TLS. |
 | Authentication | The contract has no accounts, passwords, or sessions. The two health routes are unauthenticated. No other route exists. |
 | Installer | No installer is part of this foundation. |
-| Audit chain | Audit persistence is not in this foundation. There is no append-only audit chain to verify. |
+| Audit chain | The domain audit log refuses deletion in memory. PostgreSQL persistence and its append-only triggers have not been applied, so the database chain is not verified. |
 | XRP Ledger confirmation | No XRP Ledger code is authorized in this milestone. There is no ledger confirmation to verify. |
 
 ## Out of scope for this plan
 
-Rate-limit behavior outside the Testing environment is specified by the health contract and is not a planned test here. Payment, identity, shipment, compliance, document upload, and a browser API page are outside the health contract. This plan assigns no completion share to any item.
+Rate-limit behavior outside the Testing environment is specified by the health contract and is not a planned test here. A browser shipment interface, a live bank, and a live hazmat decision are outside this plan.
+
+## Phase Zero domain plan
+
+Date: 2026-09-30. These checks run in `ClearHaul.Domain.Tests` against the in-process model. They do not open a database, a bank, or a regulatory service.
+
+The automated scenarios cover unverified posting, inactive authority, expired insurance, unfunded award, hidden equipment history, unassigned trailer history, trailer substitution, washout mismatch, altered washout evidence, append-only history correction, offline packet read, hazmat quantity change, fixture placard change with a live refusal, missing classification, missing clearance for incompatible facts, missing permit data, missing endorsement, declared route restriction, withdrawal after pickup, detention proposal, one-line accessorial dispute, private compensation dispute, audit deletion refusal, suspended bidding, revoked signed link, concurrent edit, duplicate webhook, unavailable verification, bound rule version, and investigator conflict.
+
+A synthetic rule fixture may return a labeled test decision only when the caller sets live evaluation off. Live evaluation returns UNABLE TO DETERMINE and QUALIFIED HAZMAT REVIEW REQUIRED. That fixture is not a regulation.

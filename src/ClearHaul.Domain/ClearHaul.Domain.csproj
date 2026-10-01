@@ -1,0 +1,7 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>ClearHaul.Domain</RootNamespace>
+    <Version>0.2.0-phase-zero</Version>
+    <Description>In-process shipment, payment, permission, and rules foundation. No network calls.</Description>
+  </PropertyGroup>
+</Project>

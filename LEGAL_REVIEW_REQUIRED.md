@@ -1,16 +1,18 @@
 # Legal review required
 
-This file lists subjects that need a qualified person before any rule is encoded. It does not state a legal rule. It does not decide what ClearHaul may do. Compliance is not complete. No freight workflow exists.
+This file lists subjects that need a qualified person before any rule is encoded. It does not state a legal rule. It does not decide what the platform may do. Compliance is not complete. The Phase Zero domain model is not a live freight workflow.
 
 ## No source has been verified
 
-No legal source has been verified for this project. No statute, regulation, or agency rule has been verified. This file does not cite one and does not paraphrase one as if it were established.
+No statute, regulation, or agency rule has been verified. This file does not cite one. The blueprint and master prompt are stored as markdown under `docs/source`. They are product instructions, not legal authority. The live rules engine returns UNABLE TO DETERMINE when no approved package exists. No package is approved.
 
-`docs/source/README.md` records that the ClearHaul blueprint and the master build prompt were not supplied. This file does not invent substitutes for those documents. Nothing missing from that folder is treated as a source.
+## Legal role
+
+An attorney has to decide whether the software's actual behavior makes the operator a broker, a carrier, a payment agent, or only a software vendor. Until that opinion exists, the product must not describe itself as a broker or as an escrow holder. Production money movement stays blocked.
 
 ## First-pilot note
 
-Under CH-D-0003, the temporary documentation boundary is nonhazardous domestic dry-van freight. That note is not a legal determination. It does not decide that any freight is nonhazardous. It does not authorize a pilot, a carrier, a document set, a payment, a retention period, or a hazardous-material feature. No hazardous-material rule is written or encoded. CH-D-0003 is an engineering assumption for documentation only. It still requires later professional review before any hazardous-material feature is specified.
+CH-D-0015 limits the first live pilot to nonhazardous domestic dry-van freight. That is a product boundary, not a finding that any shipment is nonhazardous. Hazmat dispatch stays disabled until qualified hazmat and legal review.
 
 ## Who must review a subject before any rule is encoded
 

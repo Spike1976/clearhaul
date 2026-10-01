@@ -255,3 +255,87 @@ Affected modules: git remote, public repository
 Requires later professional review: Yes. CH-D-0014 final review remains open.
 Supersedes:
 Implementation status: In effect when the push succeeds.
+
+DECISION CH-D-0022
+
+Date: 2026-09-30
+Decided by: Engineering lead, from the product assignment
+Question reference: CH-0008
+Decision: The blueprint and master build prompt were supplied as assignment text and stored as docs/source/Project_ClearHaul_Blueprint.md and docs/source/CLEARHAUL_MASTER_BUILD_PROMPT.md. A .docx binary was not attached. Phase Zero may be designed from those files. The markdown is not a legal opinion.
+Reason: The product assignment said to read the blueprint and build. The required names were not present as binaries.
+Affected modules: product scope, domain library, docs/source
+Requires later professional review: No, for the act of recording the text. Yes, before live freight or payment claims.
+Supersedes: the "files absent" limit in CH-D-0013
+Implementation status: In effect
+
+DECISION CH-D-0023
+
+Date: 2026-09-30
+Decided by: Engineering lead
+Question reference:
+Decision: Keep the existing .NET 8, ASP.NET Core, Avalonia, PostgreSQL, Redis, and MinIO direction. Do not start a parallel Next.js or NestJS application. The blueprint allows the existing stack to remain.
+Reason: Replacing the tested foundation would discard working health, backup, and website code.
+Affected modules: repository structure
+Requires later professional review: No
+Supersedes:
+Implementation status: In effect
+
+DECISION CH-D-0024
+
+Date: 2026-09-30
+Decided by: Engineering lead, from the blueprint
+Question reference: CH-0003
+Decision: The domain permission model uses the thirteen roles named in the blueprint. The four Windows workspace labels remain unfinished shell labels under CH-D-0016. They are not a substitute for the thirteen roles.
+Reason: The blueprint is the later product document. The shell still must not show fake controls.
+Affected modules: ClearHaul.Domain, ClearHaul.Client
+Requires later professional review: No
+Supersedes:
+Implementation status: In effect for the domain library. The shell is unchanged.
+
+DECISION CH-D-0025
+
+Date: 2026-09-30
+Decided by: Engineering lead
+Question reference: CH-0002
+Decision: The hazmat gate stores facts and returns UNABLE TO DETERMINE with QUALIFIED HAZMAT REVIEW REQUIRED on every live evaluation. No statute text is encoded. A synthetic fixture can be evaluated only when live mode is off. Live hazmat dispatch stays disabled.
+Reason: CH-D-0015 asks for parallel hazmat groundwork without live activation, and the blueprint forbids an invented classification.
+Affected modules: ClearHaul.Domain rules and hazmat gate
+Requires later professional review: Yes, before any live hazmat operation.
+Supersedes:
+Implementation status: In effect
+
+DECISION CH-D-0026
+
+Date: 2026-09-30
+Decided by: Engineering lead
+Question reference:
+Decision: Payment in Phase Zero is a sandbox adapter labeled sandbox-not-a-bank and a simulated double-entry ledger. Production funding results are rejected. Reserved funds cannot be withdrawn by the shipper after award. No commission percentage is calculated.
+Reason: The blueprint forbids a homemade escrow account and forbids pretending a simulation is production.
+Affected modules: ClearHaul.Domain payments
+Requires later professional review: Yes, before any real money movement. The operator's legal role is also undecided.
+Supersedes:
+Implementation status: In effect
+
+DECISION CH-D-0027
+
+Date: 2026-09-30
+Decided by: Engineering lead
+Question reference: CH-0004
+Decision: db/migrations/0002_phase_zero.sql is the Phase Zero schema. It is not applied. Compose is not started. Docker is not installed.
+Reason: A schema file can be reviewed. Creating a database without Docker and without a migration test would overstate readiness.
+Affected modules: database, docker-compose.yml
+Requires later professional review: No
+Supersedes:
+Implementation status: In effect
+
+DECISION CH-D-0028
+
+Date: 2026-09-30
+Decided by: Engineering lead
+Question reference:
+Decision: Phase Zero work stays on branch milestone/m1-phase-zero. It is not merged to main and it is not pushed unless Michael asks.
+Reason: main is public and already contains the foundation checkpoint. This branch needs review before it becomes the default branch.
+Affected modules: git
+Requires later professional review: No
+Supersedes:
+Implementation status: In effect until a later merge is requested

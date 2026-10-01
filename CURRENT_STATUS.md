@@ -1,20 +1,18 @@
 # Current status
 
 Date: 2026-09-30
-Current milestone: foundation checkpoint, not a finished product milestone
-Current branch: main
+Current milestone: Phase Zero domain foundation. Not an MVP and not a live marketplace.
+Current branch: milestone/m1-phase-zero
 Published repository: https://github.com/Spike1976/clearhaul
-Foundation code commit: 0bcd526ae17181516be8199f36327b21d508ed4e
-Website merge is on main after that commit.
-Last completed task: Encrypted repository backup restored and verified.
+Published main commit before this branch: 2ee5a787d5aae873eac58eccb2f12243bae31a78
+Last completed task: Phase Zero domain library implemented and covered by the Release suite.
 
 ## Counts
 
-Complete: 4
-Partial: 4
+Complete: 5
+Partial: 8
 Failed: 0
-Blocked: 5
-Not started: the freight, payment, identity, audit, and anchoring product
+Blocked: 6
 
 Complete means a test command passed for that slice:
 
@@ -22,84 +20,79 @@ Complete means a test command passed for that slice:
 - Client health client
 - Backup library round trip, tamper checks, and retention selection
 - Repository secret scan
+- In-process shipment, payment, permission, equipment-history, and hazmat-gate model
 
 Partial:
 
-- Avalonia window compiles and lists four workspaces as not built. The button was not clicked in a live window.
-- Docker Compose file exists and was not started.
-- `db/migrations/0001_foundation.sql` exists and has not been applied.
-- AGPL version 3 is the working license. The final legal review is still open.
+- Avalonia window compiles and lists four workspaces as not built. The button was not clicked.
+- Docker Compose file exists and was not started. It now mounts the migrations directory.
+- `db/migrations/0001_foundation.sql` and `0002_phase_zero.sql` exist and have not been applied.
+- AGPL version 3 is the working license. Final legal review is still open.
+- Sandbox funding adapter and simulated ledger. No bank.
+- Hazmat facts and a rules engine that refuses a live answer. No approved rule package.
+- Equipment history, washout checks, and enforcement records. No file storage and no investigator console.
+- Driver packet token with an offline read. No Android app.
 
 Blocked:
 
-- Product workflows, until `docs/source/Project_ClearHaul_Blueprint.docx` and `docs/source/CLEARHAUL_MASTER_BUILD_PROMPT.md` are present and read
+- Shipment HTTP API and the shipper, carrier, driver, and administrator screens
 - Docker Desktop, which is not installed and was not installed
+- A running database and the migration tests
 - External-drive backup, until Michael provides the path
 - Live hazmat operation, until qualified review
-- Production XRP Ledger anchoring, until a separate written approval
+- Production payment and production XRP Ledger anchoring
 
 ## Features that work
 
-- `GET /health/live` and `GET /health` on the test host, with the headers in the foundation contract
+- `GET /health/live` and `GET /health` on the test host
 - Unknown routes return a problem response without a stack trace
 - The Windows health client rejects a file address and reads a stub health response
 - Encrypted backup create and restore for a sample directory
 - A text scan for private keys and cloud access-key prefixes
-
-## Partial features
-
-- Windows shell
-- Compose definition for PostGIS, Redis, and MinIO
-- Foundation SQL file
-- Public working license with review still open
-
-## Blocked features
-
-- Shipment, payment, compliance, and hazmat workflows
-- A running database
-- Off-computer backup
-- XRP Ledger testnet or Mainnet
+- Domain transitions for the nonhazardous dry-van path, including refused unverified posting, refused unfunded award, hidden equipment history, simulated balanced release, and refused audit deletion
 
 ## Questions
 
-No question is waiting. Answers are in QUESTIONS_FOR_MICHAEL.md. Decisions CH-D-0013 through CH-D-0021 record them.
+No question is waiting in the notepad. The legal role of the operator is undecided and is recorded in LEGAL_REVIEW_REQUIRED.md. It blocks live money movement and any public claim that the platform is a broker or an escrow holder. It does not block the in-process model.
 
 ## Tests
 
-See TEST_RESULTS.md. Command exit code was 0. Passed 16, failed 0, skipped 0.
+See TEST_RESULTS.md. Command exit code was 0. Passed 52, failed 0, skipped 0.
 
 ## Defects
 
 - Avalonia 12.1.3 does not compile with the installed .NET 8 compiler. The client uses Avalonia 11.3.22.
 - The MinIO and PostGIS image tags have not been pulled.
 - The window button has not been operated by a person in this session.
+- The backup m0-foundation-20260930 does not contain this Phase Zero branch.
+- SQL append-only triggers are untested because PostgreSQL is not running.
 
 ## Security
 
-No accounts, no TLS, no audit ledger, and no production secrets. The health routes are unauthenticated and return no freight data. See SECURITY_MODEL.md and RISK_REGISTER.md.
+Health routes are unauthenticated and return no freight data. Domain permissions exist in memory only. There is no login, no TLS, and no persisted audit ledger. See SECURITY_MODEL.md.
 
 ## Compliance
 
-No legal rule is encoded. The first live pilot boundary is nonhazardous domestic dry-van freight. Hazmat code has not been started. See LEGAL_REVIEW_REQUIRED.md.
+No statute is encoded. Live hazmat dispatch is disabled. See HAZMAT_ENGINE.md and LEGAL_REVIEW_REQUIRED.md.
 
 ## Backup
 
 Local destination: `C:\Users\17402\ClearHaul-Backups`
-Repository restore: succeeded for backup m0-foundation-20260930. README.md hashes matched. Details are in BACKUP_LOG.md.
+Repository restore: succeeded for backup m0-foundation-20260930. That restore does not include Phase Zero.
 Off-computer copy: not configured
 
 ## Next task
 
-Read the blueprint and the master build prompt after they are placed in `docs/source`. Do not design product workflows before that.
+Wire the domain model to authenticated persistence after Docker is available, or build the first real shipper tender screen against the domain library without adding fake controls. Do not start Compose and do not merge this branch to main until that work is reviewed.
 
 ## Resume
 
 ```powershell
 Set-Location C:\Users\17402\projects\clearhaul
-git switch milestone/m0-foundation
+git switch milestone/m1-phase-zero
 dotnet test ClearHaul.sln --configuration Release
 ```
 
 ## Files under active development
 
-The foundation tree in this repository. No second workstream is open.
+`src/ClearHaul.Domain`, `tests/ClearHaul.Domain.Tests`, and `db/migrations/0002_phase_zero.sql`.

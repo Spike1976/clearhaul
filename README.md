@@ -1,8 +1,8 @@
 # ClearHaul
 
-ClearHaul is a freight-operations project. The code in this repository is a foundation checkpoint, not a working freight system.
+ClearHaul is a freight-operations project. The code in this repository is a foundation plus an in-process Phase Zero domain model. It is not a working freight marketplace.
 
-The product blueprint and the master build prompt were not in the workspace when the foundation was created. Product workflows are not implemented. Nothing in this repository moves freight, holds funds, checks compliance, or writes to a blockchain.
+The domain model can validate a load tender, move a shipment through tested states, keep a simulated ledger, hide equipment history, and refuse an invented hazmat answer. It does not move freight, hold real funds, call a bank, or write to a blockchain. Shipment behavior is not on the HTTP server.
 
 The authoritative status is [CURRENT_STATUS.md](CURRENT_STATUS.md). Questions for the product owner are in [QUESTIONS_FOR_MICHAEL.md](QUESTIONS_FOR_MICHAEL.md).
 

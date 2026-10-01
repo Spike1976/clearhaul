@@ -1,0 +1,41 @@
+openapi: 3.0.3
+info:
+  title: Foundation health
+  version: 0.1.0-foundation
+  description: Loopback health routes only. Shipment operations are not published.
+servers:
+  - url: http://127.0.0.1:5080
+paths:
+  /health/live:
+    get:
+      operationId: getHealthLive
+      responses:
+        "200":
+          description: Process is running.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status]
+                properties:
+                  status:
+                    type: string
+                    enum: [Healthy]
+  /health:
+    get:
+      operationId: getHealth
+      responses:
+        "200":
+          description: Dependency checks. Database, Redis, and object storage are not configured.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [status, version, stage]
+                properties:
+                  status:
+                    type: string
+                  version:
+                    type: string
+                  stage:
+                    type: string

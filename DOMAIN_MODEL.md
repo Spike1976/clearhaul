@@ -1,15 +1,39 @@
 # Domain model
 
-Business aggregates are not specified.
+Phase Zero lives in `src/ClearHaul.Domain`. It is an in-process model. It is not exposed on the HTTP server. The product name is not part of a state, a table, or a rule.
 
-The blueprint and the master build prompt were not supplied. `docs/source/README.md` records that fact. Decision CH-D-0001 says product workflows are not designed from guesswork. This file does not invent aggregates, fields, states, or tables.
+## Aggregates
 
-No shipment aggregate is defined. No payment state is defined. No database table is defined here. No legal rule is defined here.
+- Actor and organization, with one or more platform roles.
+- Load tender, with structured parties, stops, freight, equipment, schedule, money, and compliance facts. Notes cannot replace a required field.
+- Shipment, whose state follows `TransitionCatalog`.
+- Payment account and balanced ledger. Shipment funds and platform operating funds are different accounts.
+- Equipment history book and shipment-scoped access.
+- Washout evidence.
+- Rule package, citation, and compliance decision.
+- Audit log, notification log, evidence chain, signed document link, and retention policy.
+- Verification snapshot, bank-change hold, compensation disclosure, and enforcement case.
 
-Decision CH-D-0003 is a reversible documentation assumption about a possible later pilot boundary. It does not define a freight aggregate, a field, or a rule. No freight workflow exists.
+## Shipment transitions
 
-Decision CH-D-0004 names four workspace labels: shipper, carrier, driver testing, and administrator. Those labels are not domain aggregates. They are not built.
+`TransitionCatalog.All` is the contract. Each entry names the actor, previous state, required data, validation, audit event, notification, reversal, and failure behavior. Failed transitions leave the state unchanged and append a refusal audit event.
 
-No user aggregate and no role aggregate exist. See `PERMISSION_MATRIX.md`.
+## Equipment approval
 
-The audit ledger, object storage, and XRP Ledger anchoring are not modeled here. They are not started. See `ARCHITECTURE.md`.
+`EquipmentApprovalStateMachine.Project` maps the shipment state to assignment pending, assigned, review, cleaning requested, substitution requested, approved, or not in equipment review. Rejecting a trailer requests substitution and does not clear the selected carrier.
+
+## Relationship sketch
+
+```text
+organization 1---* app_user 1---* user_role
+organization 1---* shipment 1---1 load_tender
+shipment 1---* shipment_transition
+shipment 1---* load_stop
+shipment 1---* ledger_entry
+shipment 1---* equipment_history_access
+equipment_history_entry 0---* amendment
+shipment *---1 rule_package
+audit_event records actor, shipment, and rule version
+```
+
+The SQL form is `db/migrations/0002_phase_zero.sql`. It has not been applied.

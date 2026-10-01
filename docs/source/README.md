@@ -2,9 +2,9 @@
 
 The engineering operating order given on 2026-09-30 is stored as `ENGINEERING_OPERATING_ORDER.md` in this folder.
 
-The required source files are not in this folder yet:
+The product assignment supplied after that order is stored here as markdown because a `.docx` binary was not attached:
 
-- Project_ClearHaul_Blueprint.docx
-- CLEARHAUL_MASTER_BUILD_PROMPT.md
+- `Project_ClearHaul_Blueprint.md` is the governing product text that was read before Phase Zero.
+- `CLEARHAUL_MASTER_BUILD_PROMPT.md` is the build instruction from the same assignment.
 
-Decision CH-D-0013 says product workflows wait until both files are read. Do not add invented substitutes.
+Decision CH-D-0022 records that these files are the texts that were read. They do not close legal review, and they do not authorize a live hazmat decision or a production payment.

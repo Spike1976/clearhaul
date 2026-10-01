@@ -2,9 +2,15 @@
 
 Project ClearHaul. Decision CH-D-0020 uses ClearHaul as the working name and requires branding to stay configurable.
 
-This document records planned boundaries from the engineering operating order and the foundation decisions. It does not report a working freight system. No product workflow works. No feature is complete.
+This document records the foundation and the Phase Zero domain library. It does not report a working marketplace. Status values are `present`, `partial`, or `not started`. An item is `present` only when it exists and the tests named in TEST_RESULTS.md cover it.
 
-The blueprint and the master build prompt were not in docs/source when this foundation was prepared. Decision CH-D-0013 says product workflows wait until both files are read. Status values are `present`, `partial`, or `not started`. An item is `present` only when it exists in the repository and this document is not using that word for an unverified project file. The integrator verifies builds and tests. This document does not.
+The governing product text is `docs/source/Project_ClearHaul_Blueprint.md`. Decision CH-D-0023 keeps the existing .NET 8 stack.
+
+## Domain library
+
+Status: present for in-process rules. Partial as a product, because nothing is persisted and no shipment route exists.
+
+`src/ClearHaul.Domain` contains the shipment, payment, equipment, permission, audit, and rules types. `ClearHaul.Domain.Tests` passed 36 tests in the Release suite. The server does not reference this library. A screen does not call it.
 
 Observed when this file was written: `src/ClearHaul.Client/ClearHaul.Client.csproj` was on disk. No server project file was on disk. PostgreSQL, Redis, object storage, the audit ledger, the XRP Ledger, payments, and freight workflows were not started.
 
@@ -28,7 +34,7 @@ The operating order's first assignment includes a Windows client shell. Decision
 
 Status: not started.
 
-The operating order requires a database before schema changes can be trusted. The foundation health contract reports `postgres` as `NotConfigured` and forbids a database connection. Decision CH-D-0017 approves Docker Compose and forbids installing Docker Desktop without permission. Docker is not installed. No database is created. A Compose file or a SQL file, if one is on disk, does not start this boundary. No business table is specified.
+The foundation health contract reports `postgres` as `NotConfigured`. The server still has no database connection. Decision CH-D-0017 approves Docker Compose and forbids installing Docker Desktop without permission. Docker is not installed. No database is created. `db/migrations/0002_phase_zero.sql` specifies Phase Zero tables and has not been applied.
 
 ### Object storage
 

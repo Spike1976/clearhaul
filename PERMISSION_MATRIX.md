@@ -1,18 +1,32 @@
 # Permission matrix
 
-No users exist. No roles exist.
+Domain permissions are enforced by `PermissionMatrix` in the in-process model. They are not HTTP routes. The health routes remain unauthenticated and return no freight data.
 
-No accounts, passwords, or sessions are specified. Decision CH-D-0004 names shipper, carrier, driver testing, and administrator as workspace labels that are not built. Those labels are not roles and grant nothing.
+Sensitive domain actions require `MfaSatisfied` on the actor. The flag is an input. No authenticator is integrated. A false flag refuses the action.
 
-Once the server exists, the only specified routes are unauthenticated. No credential is required, and no credential grants authority.
+| Role | Grants |
+| --- | --- |
+| Shipper organization administrator | Submit tender, publish, select carrier, review and approve assigned equipment, request payment release, dispute, read own organization |
+| Shipper employee | Submit tender, publish, select carrier, review and approve assigned equipment, dispute |
+| Shipping-facility personnel | Washout evidence, delivery evidence |
+| Carrier organization administrator | Bid, assign equipment, washout evidence, dispute, read own organization |
+| Dispatcher | Bid, assign equipment, washout evidence |
+| Safety and compliance personnel | Washout evidence, read own organization |
+| Driver | Acknowledge packet, delivery evidence, washout evidence, dispute |
+| Washout or inspection facility | Washout evidence |
+| Platform investigator | Investigate, read audit. MFA required |
+| Platform compliance administrator | Draft a rule package, review identity, read audit. MFA required for draft and identity |
+| Payment and dispute administrator | Record sandbox funding and release, dispute, read audit. MFA required for funding and release |
+| Read-only auditor | Read audit, read organization record |
+| System administrator | Review identity, read audit, record enforcement. MFA required. No payment release and no equipment-history view |
 
-| Route | Method | Once the server exists |
+No role can delete an audit event, search a carrier fleet, approve a rule package for live hazmat, post a non-simulated ledger line, or withdraw reserved funds after award.
+
+Equipment history also requires all of the following: the shipper role that may review equipment, the same organization as the shipment, the user id authorized on that shipment, a selected carrier, the assigned trailer id, and an unexpired access window. A view, export, or download is logged.
+
+| Route | Method | Access |
 | --- | --- | --- |
 | `/health/live` | GET | Unauthenticated |
 | `/health` | GET | Unauthenticated |
 
-No other route is authorized.
-
-A path outside those two routes is not an authorized route. The health contract requires `404` for any other path. That response does not grant access.
-
-Nothing in this matrix authorizes shipment, payment, document, audit, database, or XRP Ledger actions. Those capabilities are not started. See `ARCHITECTURE.md`.
+No shipment route is published.
