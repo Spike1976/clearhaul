@@ -12,6 +12,7 @@ window.addEventListener('scroll', updateHeader, { passive: true });
 navToggle?.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.querySelector('.sr-only').textContent = open ? 'Close navigation' : 'Open navigation';
 });
 
 nav?.querySelectorAll('a').forEach((link) => {
@@ -25,7 +26,11 @@ const tabs = [...document.querySelectorAll('[data-tab]')];
 const panels = [...document.querySelectorAll('[data-panel]')];
 
 function selectTab(name) {
-  tabs.forEach((tab) => tab.setAttribute('aria-selected', String(tab.dataset.tab === name)));
+  tabs.forEach((tab) => {
+    const selected = tab.dataset.tab === name;
+    tab.setAttribute('aria-selected', String(selected));
+    tab.tabIndex = selected ? 0 : -1;
+  });
   panels.forEach((panel) => { panel.hidden = panel.dataset.panel !== name; });
 }
 
@@ -39,6 +44,41 @@ tabs.forEach((tab, index) => {
     next.focus();
     selectTab(next.dataset.tab);
   });
+});
+
+const releaseOptions = [...document.querySelectorAll('[data-release]')];
+const payoutState = document.querySelector('[data-payout-state]');
+const payoutNote = document.querySelector('[data-payout-note]');
+
+function selectRelease(option) {
+  releaseOptions.forEach((button) => {
+    const selected = button === option;
+    button.setAttribute('aria-checked', String(selected));
+    button.tabIndex = selected ? 0 : -1;
+  });
+  if (payoutState) payoutState.textContent = option.dataset.state;
+  if (payoutNote) payoutNote.textContent = option.dataset.note;
+}
+
+releaseOptions.forEach((option, index) => {
+  option.addEventListener('click', () => selectRelease(option));
+  option.addEventListener('keydown', (event) => {
+    if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown'].includes(event.key)) return;
+    event.preventDefault();
+    const forward = ['ArrowRight', 'ArrowDown'].includes(event.key);
+    const next = releaseOptions[(index + (forward ? 1 : -1) + releaseOptions.length) % releaseOptions.length];
+    selectRelease(next);
+    next.focus();
+  });
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && nav?.classList.contains('open')) {
+    nav.classList.remove('open');
+    navToggle?.setAttribute('aria-expanded', 'false');
+    navToggle?.querySelector('.sr-only').replaceChildren('Open navigation');
+    navToggle?.focus();
+  }
 });
 
 const observer = new IntersectionObserver((entries) => {
