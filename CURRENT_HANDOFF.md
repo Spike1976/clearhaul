@@ -10,6 +10,6 @@ CH-0009 through CH-0018 were answered on 2026-10-01 and recorded as CH-D-0031 th
 
 Backup m1-entry-20260930 was created before the identity edits and restored with exit code 0. It has no database. Backup m3-entry-20260930 records commit 305f799, restored with exit code 0, and the manifest result is verified. It has no database. See BACKUP_LOG.md.
 
-This branch now contains GitHub `main` through `61a7c8e`, including the Milestone 4 and Milestone 5 engineering orders. Those orders are not implemented. No milestone tag was created. Specialists were not assigned feature work because the entry gates have not passed.
+This branch now contains GitHub `main` through `952dfdb`, including the Milestone 4, Milestone 5, and Milestone 6 engineering orders. Those orders are not implemented. No milestone tag was created. Specialists were not assigned feature work because the entry gates have not passed.
 
 Next session: install Docker Desktop, prove Compose, apply the migrations, and build Milestone 2. Milestone 3 waits for that gate. Milestones 4 and 5 wait for the earlier gates. Place `docs\source\Project_ClearHaul_Blueprint.docx` when Michael supplies it.

@@ -10,3 +10,4 @@
 - Milestone 3 was not started. The entry gate failed because Milestone 2 is not persisted and the tag `clearhaul-m2-marketplace` does not exist. Privacy and cost questions CH-0010 through CH-0018 are open. Source backup `m3-entry-20260930` restored with a verified manifest and contains no database.
 - On 2026-10-01 Michael Stokes answered CH-0009 through CH-0018. The answers are CH-D-0031 through CH-D-0040. Docker may be installed. Marketplace and equipment workflows are still not built.
 - The local milestone record was combined with GitHub `main` at `61a7c8e`. The public website and the Milestone 4 and Milestone 5 orders are in the same tree. No product workflow was optimized into a finished feature.
+- Milestone 6, Controlled Pilot and Production Readiness, was added from GitHub commit `952dfdb`. The pilot has not started.
