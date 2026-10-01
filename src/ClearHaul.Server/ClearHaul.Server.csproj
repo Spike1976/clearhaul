@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <RootNamespace>ClearHaul.Server</RootNamespace>
+    <Version>0.1.0-foundation</Version>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClearHaul.Contracts\ClearHaul.Contracts.csproj" />
+  </ItemGroup>
+</Project>

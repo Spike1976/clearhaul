@@ -18,4 +18,6 @@ The server, when present, listens on `http://127.0.0.1:5080`. Docker Compose is 
 
 ## License
 
-The license is not adopted. See [OPEN_SOURCE_GOVERNANCE.md](OPEN_SOURCE_GOVERNANCE.md) and question CH-0001.
+The working license for the server and core is AGPL version 3. See [LICENSE](LICENSE) and [OPEN_SOURCE_GOVERNANCE.md](OPEN_SOURCE_GOVERNANCE.md). A final legal and open-source review is still open under decision CH-D-0014.
+
+The public repository is https://github.com/Spike1976/clearhaul.

@@ -7,15 +7,22 @@ File opened: 2026-09-30
 How to answer a question:
 Type your letter under "Michael's answer:". Add a short note if you want. Save this file.
 
-Active questions are first. Answered questions will be moved to the bottom.
+Active questions are first. There are no active questions.
 
-Eight questions are open. The engineering order required seven. One more was added because the blueprint and the master build prompt were not found on this computer. No further questions will be added until one of these is answered, unless there is an emergency.
+Answered questions are below. They were answered in writing on 2026-09-30.
 
-Work that can be undone is continuing. No legal, financial, hazmat, or production-blockchain choice has been assumed.
+The blueprint file and the master build prompt were still not in docs\source when these answers were recorded. Their required names are:
+
+- docs\source\Project_ClearHaul_Blueprint.docx
+- docs\source\CLEARHAUL_MASTER_BUILD_PROMPT.md
+
+Product workflows stay unbuilt until both files are present and have been read.
+
+## Answered questions
 
 QUESTION CH-0008
 
-Status: ANSWER NEEDED
+Status: ANSWERED
 Priority: IMPORTANT
 Area: Other
 
@@ -43,12 +50,18 @@ Default if Michael does not choose:
 Foundation work continues from the engineering order only. Product workflows are not started. This does not invent a blueprint.
 
 Michael's answer:
+C. The blueprint and master build prompt were supposed to be provided. I will place both files in the project's docs\source folder. Do not design product workflows until you have read both completely.
+
+Required filenames:
+docs\source\Project_ClearHaul_Blueprint.docx
+docs\source\CLEARHAUL_MASTER_BUILD_PROMPT.md
 
 Decision recorded:
+The engineering foundation may continue. Product workflows require both source documents. Recorded as CH-D-0013.
 
 QUESTION CH-0001
 
-Status: ANSWER NEEDED
+Status: ANSWERED
 Priority: IMPORTANT
 Area: Legal
 
@@ -76,12 +89,14 @@ Default if Michael does not choose:
 A copy of the AGPL version 3 text is stored as the recommended license and marked provisional. It is not treated as adopted. The project will not be published until this question is answered. The file can be replaced.
 
 Michael's answer:
+A. Use AGPL version 3 for the ClearHaul server and core. Keep the license provisional until the project receives a final legal and open-source review before public release.
 
 Decision recorded:
+AGPLv3 is the approved working license for the server and core. Integration libraries may later use Apache 2.0 if separately approved. Recorded as CH-D-0014. A later written direction on 2026-09-30 told engineering to put the repository on the public GitHub remote. That direction is CH-D-0021. The final legal and open-source review is still not done.
 
 QUESTION CH-0002
 
-Status: ANSWER NEEDED
+Status: ANSWERED
 Priority: IMPORTANT
 Area: Hazmat
 
@@ -109,12 +124,16 @@ Default if Michael does not choose:
 Documents and future design notes treat the first pilot as nonhazardous domestic dry-van freight. No hazardous-material rules are written. This assumption can be changed before any pilot data is stored.
 
 Michael's answer:
+A. Limit the first live pilot to nonhazardous domestic dry-van freight.
+
+The hazmat database, rules engine, schemas, test cases and driver information system should still be developed in parallel. Hazmat operation must not be activated for live loads until it has been reviewed by qualified hazmat and legal professionals.
 
 Decision recorded:
+The first live pilot is nonhazardous domestic dry-van freight. Hazmat foundations are developed but remain disabled for live transportation until reviewed and approved. Recorded as CH-D-0015. Hazmat design waits until the blueprint and master build prompt have been read, because those workflows must not be invented.
 
 QUESTION CH-0003
 
-Status: ANSWER NEEDED
+Status: ANSWERED
 Priority: IMPORTANT
 Area: User Interface
 
@@ -142,12 +161,16 @@ Default if Michael does not choose:
 The window lists all four names and says each one is not built. No workspace workflow is created. The labels can be removed later.
 
 Michael's answer:
+A. Show shipper, carrier, driver testing and administrator workspaces.
+
+During the foundation milestone, clearly mark unfinished workspaces as not built. As each milestone is completed, replace the placeholder with the real working workspace. Do not leave fake buttons or pretend unfinished screens work.
 
 Decision recorded:
+The Windows client will contain four role-controlled workspaces: shipper, carrier, driver testing and administrator. Recorded as CH-D-0016.
 
 QUESTION CH-0004
 
-Status: ANSWER NEEDED
+Status: ANSWERED
 Priority: IMPORTANT
 Area: Other
 
@@ -175,12 +198,16 @@ Default if Michael does not choose:
 The compose file is prepared and is not started. Nothing is installed. No database is created.
 
 Michael's answer:
+A. Use Docker Desktop for PostgreSQL, MinIO and Redis during local development.
+
+Prepare the Docker Compose environment now. Do not install or change protected system software without permission. Provide plain-language installation instructions if Docker Desktop must be installed manually.
 
 Decision recorded:
+Docker Desktop and Docker Compose are the approved local-development method for PostgreSQL, MinIO, Redis and supporting services. Recorded as CH-D-0017. Docker Desktop was not installed by engineering.
 
 QUESTION CH-0005
 
-Status: ANSWER NEEDED
+Status: ANSWERED
 Priority: IMPORTANT
 Area: Security
 
@@ -208,12 +235,19 @@ Default if Michael does not choose:
 No off-computer copy is made. Local encrypted backups are stored at C:\Users\17402\ClearHaul-Backups. That folder is outside the source repository.
 
 Michael's answer:
+A. Use an encrypted external drive as the first off-computer backup destination.
+
+Until I provide the external-drive path, continue encrypted rolling backups at:
+C:\Users\17402\ClearHaul-Backups
+
+Design the backup system so a second encrypted cloud destination can be added later. Never store plaintext passwords, signing keys, personal information or production secrets in a backup.
 
 Decision recorded:
+Local encrypted rolling backups begin immediately. Encrypted external-drive backups begin when Michael provides the drive and path. A second offsite destination remains planned. Recorded as CH-D-0018.
 
 QUESTION CH-0006
 
-Status: ANSWER NEEDED
+Status: ANSWERED
 Priority: IMPORTANT
 Area: Security
 
@@ -241,12 +275,16 @@ Default if Michael does not choose:
 Nobody is authorized. Production anchoring cannot be enabled. No approver is assumed. The test network is not connected in this foundation.
 
 Michael's answer:
+A. Only Michael Stokes may approve production XRP Ledger anchoring, and approval must be given in writing.
+
+Testnet integration may be built and tested. Production XRP Ledger access, Mainnet credentials and production anchoring must remain disabled until separately approved.
 
 Decision recorded:
+Michael Stokes is the sole production-XRPL approver. Testnet work does not authorize Mainnet activation. Recorded as CH-D-0019.
 
 QUESTION CH-0007
 
-Status: ANSWER NEEDED
+Status: ANSWERED
 Priority: ADVISORY
 Area: Other
 
@@ -274,5 +312,9 @@ Default if Michael does not choose:
 The window and documents use ClearHaul. The name can be changed before any public release.
 
 Michael's answer:
+A. ClearHaul is the working product name.
+
+Keep branding configurable so the public name can be changed later without rewriting the system. Do not hard-code ClearHaul into database rules, API contracts or business logic where configuration is appropriate.
 
 Decision recorded:
+ClearHaul is the working product and repository name. The system must remain technically rebrandable. Recorded as CH-D-0020.

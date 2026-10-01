@@ -2,7 +2,7 @@
 
 Michael's decisions belong in this file after they are answered in QUESTIONS_FOR_MICHAEL.md.
 
-The records below are engineering assumptions made on 2026-09-30 because the foundation could not wait. They are reversible. They are not Michael's product decisions. None of them authorize a legal conclusion, a financial rule, a hazardous-material rule, a production key, or a production XRP Ledger connection.
+Records CH-D-0001 through CH-D-0012 were engineering assumptions. Michael's later decisions CH-D-0013 through CH-D-0021 replace them where the later record says so. If two records conflict, the later record wins. None of these records authorize a hazardous-material rule, a production key, or production XRP Ledger anchoring.
 
 DECISION CH-D-0001
 
@@ -143,7 +143,115 @@ Decided by: Engineering lead
 Question reference:
 Decision: Local backup archives are encrypted with AES-256-GCM. The content key is wrapped with Windows DPAPI for the current user and stored outside the repository. Milestone and release backups are not deleted by the rolling retention rule.
 Reason: Git is not the only backup. Plaintext secrets must not be introduced. Off-computer encryption remains blocked by CH-0005.
-Affected modules: ClearHaul.Backup, scripts/backup
+Affected modules: ClearHaul.Backup, scripts/recovery
 Requires later professional review: No
 Supersedes:
 Implementation status: In effect when the backup tool is present
+
+DECISION CH-D-0013
+
+Date: 2026-09-30
+Decided by: Michael Stokes
+Question reference: CH-0008
+Decision: The engineering foundation may continue. Product workflows require both source documents. The required files are docs/source/Project_ClearHaul_Blueprint.docx and docs/source/CLEARHAUL_MASTER_BUILD_PROMPT.md. Product workflows are not designed until both have been read completely.
+Reason: The blueprint and master build prompt were supposed to be provided. They were not in docs/source when this decision was recorded.
+Affected modules: product scope, future workflows
+Requires later professional review: No
+Supersedes: CH-D-0001
+Implementation status: In effect. Both source files were absent at the time of recording.
+
+DECISION CH-D-0014
+
+Date: 2026-09-30
+Decided by: Michael Stokes
+Question reference: CH-0001
+Decision: AGPL version 3 is the approved working license for the ClearHaul server and core. The license stays provisional until a final legal and open-source review before a finished public release. Integration libraries may later use Apache 2.0 only if that choice is separately approved.
+Reason: Michael selected the recommended license and kept a final review in front of a finished public release.
+Affected modules: LICENSE, OPEN_SOURCE_GOVERNANCE.md, docs/licensing/PROVISIONAL_LICENSE_STATUS.md
+Requires later professional review: Yes. Final legal and open-source review is still required.
+Supersedes: CH-D-0002
+Implementation status: In effect for the working license. Final review is not done.
+
+DECISION CH-D-0015
+
+Date: 2026-09-30
+Decided by: Michael Stokes
+Question reference: CH-0002
+Decision: The first live pilot is nonhazardous domestic dry-van freight. Hazmat foundations are to be developed in parallel and must remain disabled for live transportation until qualified hazmat and legal professionals review and approve them.
+Reason: Michael limited live freight and still asked for disabled hazmat groundwork.
+Affected modules: future compliance and hazmat modules
+Requires later professional review: Yes, before any live hazmat operation.
+Supersedes: CH-D-0003
+Implementation status: Pilot boundary is in effect. Hazmat design has not started. It waits until CH-D-0013 source documents have been read, so the hazmat model is not invented.
+
+DECISION CH-D-0016
+
+Date: 2026-09-30
+Decided by: Michael Stokes
+Question reference: CH-0003
+Decision: The Windows client will contain four role-controlled workspaces: shipper, carrier, driver testing, and administrator. During the foundation milestone each unfinished workspace is marked not built. A workspace is replaced by a working screen only when that milestone is actually complete. Fake buttons are not allowed.
+Reason: Michael confirmed the four workspaces and required honest unfinished labels.
+Affected modules: ClearHaul.Client
+Requires later professional review: No
+Supersedes: CH-D-0004
+Implementation status: In effect
+
+DECISION CH-D-0017
+
+Date: 2026-09-30
+Decided by: Michael Stokes
+Question reference: CH-0004
+Decision: Docker Desktop and Docker Compose are the approved local-development method for PostgreSQL, MinIO, Redis, and supporting services. Compose is prepared now. Docker Desktop is not installed or changed without a separate permission. Plain-language install steps belong in docs/setup/DOCKER_DESKTOP.md.
+Reason: Michael approved Docker for local development and forbade an unpermitted system install.
+Affected modules: docker-compose.yml, docs/setup/DOCKER_DESKTOP.md
+Requires later professional review: No
+Supersedes: CH-D-0005
+Implementation status: In effect. Docker Desktop is not installed. Compose has not been started.
+
+DECISION CH-D-0018
+
+Date: 2026-09-30
+Decided by: Michael Stokes
+Question reference: CH-0005
+Decision: Local encrypted rolling backups are stored at C:\Users\17402\ClearHaul-Backups. Encrypted external-drive backups start when Michael provides the drive and path. The backup design must allow a second encrypted cloud destination later. Backups must not contain plaintext passwords, signing keys, personal information, or production secrets.
+Reason: Michael chose an external drive and kept local backups until that path exists.
+Affected modules: backup tool, BACKUP_AND_RECOVERY.md, BACKUP_LOG.md
+Requires later professional review: No
+Supersedes: CH-D-0006
+Implementation status: Local destination is in effect. External-drive and cloud copies are not configured.
+
+DECISION CH-D-0019
+
+Date: 2026-09-30
+Decided by: Michael Stokes
+Question reference: CH-0006
+Decision: Only Michael Stokes may approve production XRP Ledger anchoring, and the approval must be in writing. Testnet integration may be built and tested later. Production XRP Ledger access, Mainnet credentials, and production anchoring stay disabled until a separate written approval.
+Reason: Michael named himself as the only production approver and separated testnet work from Mainnet.
+Affected modules: future audit anchoring, configuration
+Requires later professional review: Yes, before production activation.
+Supersedes: CH-D-0007
+Implementation status: In effect. No XRP Ledger connection is implemented in the foundation.
+
+DECISION CH-D-0020
+
+Date: 2026-09-30
+Decided by: Michael Stokes
+Question reference: CH-0007
+Decision: ClearHaul is the working product and repository name. Branding stays configurable. The name is not hard-coded into database rules, API contracts, or business logic where configuration is the right place.
+Reason: Michael confirmed the working name and required a later public rename to be possible.
+Affected modules: client shell, configuration, future schema and API contracts
+Requires later professional review: No
+Supersedes: CH-D-0008
+Implementation status: In effect
+
+DECISION CH-D-0021
+
+Date: 2026-09-30
+Decided by: Michael Stokes
+Question reference: CH-0001
+Decision: The project tree is published to the existing GitHub repository https://github.com/Spike1976/clearhaul. That repository is public. The push includes the foundation work and excludes secrets. This direction does not complete the final legal and open-source review required by CH-D-0014.
+Reason: Michael gave a later written direction to add the project to that repository.
+Affected modules: git remote, public repository
+Requires later professional review: Yes. CH-D-0014 final review remains open.
+Supersedes:
+Implementation status: In effect when the push succeeds.

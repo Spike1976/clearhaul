@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ClearHaul.Client.MainWindow"
+        Width="880"
+        Height="640"
+        MinWidth="640"
+        MinHeight="480"
+        WindowStartupLocation="CenterScreen">
+    <ScrollViewer>
+        <StackPanel Margin="32" Spacing="14">
+            <TextBlock x:Name="HeadingText"
+                       FontSize="28"
+                       AutomationProperties.Name="Product name" />
+            <TextBlock FontSize="16"
+                       TextWrapping="Wrap"
+                       Text="Shipment, payment, and compliance workflows are not built." />
+            <TextBlock FontSize="14"
+                       TextWrapping="Wrap"
+                       Text="Shipper workspace — not built" />
+            <TextBlock FontSize="14"
+                       TextWrapping="Wrap"
+                       Text="Carrier workspace — not built" />
+            <TextBlock FontSize="14"
+                       TextWrapping="Wrap"
+                       Text="Driver testing workspace — not built" />
+            <TextBlock FontSize="14"
+                       TextWrapping="Wrap"
+                       Text="Administrator workspace — not built" />
+            <TextBlock FontSize="14"
+                       TextWrapping="Wrap"
+                       Text="These labels follow decision CH-D-0016. They are not working workspaces." />
+            <TextBox x:Name="AddressBox"
+                     FontSize="14"
+                     Text="http://127.0.0.1:5080"
+                     AutomationProperties.Name="Server address" />
+            <Button HorizontalAlignment="Left"
+                    Content="Check server health"
+                    AutomationProperties.Name="Check server health"
+                    Click="OnCheckHealth" />
+            <TextBlock x:Name="ResultText"
+                       FontSize="14"
+                       TextWrapping="Wrap"
+                       AutomationProperties.Name="Health check result" />
+        </StackPanel>
+    </ScrollViewer>
+</Window>

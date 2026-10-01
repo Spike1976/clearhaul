@@ -149,8 +149,8 @@ Required output:
 - Retention selection keeps the newest 48 manifests with retentionClass worktree and never selects milestone or release. Put this rule in testable library code.
 - CLI create wraps the content key with Windows DPAPI into a key file outside the archive. CLI restore accepts only DPAPI key files. Tests call the library with an in-memory key and do not require DPAPI.
 - A tampered payload or a tampered hash fails restore.
-- scripts/backup/New-ClearHaulBackup.ps1 stages a copy of a source directory, optionally adds a Git bundle when Git is available, and calls the CLI. It refuses to write inside the source Git repository.
-- scripts/backup/Restore-ClearHaulBackup.ps1 calls the CLI and does not delete the source.
+- scripts/recovery/New-ClearHaulBackup.ps1 stages a copy of a source directory, optionally adds a Git bundle when Git is available, and calls the CLI. It refuses to write inside the source Git repository. The folder is named recovery because a standard .NET gitignore ignores directories named Backup.
+- scripts/recovery/Restore-ClearHaulBackup.ps1 calls the CLI and does not delete the source.
 - GitHub Actions workflow on windows-latest restores locked packages and runs dotnet test ClearHaul.sln --configuration Release. The solution file is created by the integrator after your work.
 - RELEASE_CHECKLIST.md lists the checks and marks each one as not run.
 - Do not write BACKUP_LOG.md.
@@ -222,7 +222,7 @@ Required output:
 - SECURITY.md describes how to report a vulnerability privately to Michael Stokes. No public disclosure address exists yet.
 - RISK_REGISTER.md uses rows with id, risk, current state, and what would reduce it. Include the missing blueprint, missing Docker, DPAPI key tied to one Windows user, and no off-computer backup.
 - docs/privacy/DATA_GOVERNANCE.md says the foundation stores no personal data and no shipment documents. Future classes are named only as future work.
-- tests/ClearHaul.Security.Tests scans the repository, ignoring bin, obj, and .git, and fails on "BEGIN PRIVATE KEY", "BEGIN RSA PRIVATE KEY", or "AKIA". It allows the exact placeholder dev-only-not-a-secret.
+- tests/ClearHaul.Security.Tests scans the repository, ignoring bin, obj, and .git, and fails on private-key blocks or Amazon-style access-key prefixes. It allows the exact placeholder dev-only-not-a-secret.
 - The scan walks parents until it finds QUESTIONS_FOR_MICHAEL.md.
 
 Tests required: dotnet test tests/ClearHaul.Security.Tests/ClearHaul.Security.Tests.csproj --configuration Release

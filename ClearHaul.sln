@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{95A8EFA5-5A58-46CF-A359-0E81C6E2FDD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearHaul.Contracts", "src\ClearHaul.Contracts\ClearHaul.Contracts.csproj", "{7C2BBFBC-9843-41D9-943B-91BD2B2A474A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearHaul.Server", "src\ClearHaul.Server\ClearHaul.Server.csproj", "{B030A51E-D6AD-45C9-9285-033267ADB684}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearHaul.Client", "src\ClearHaul.Client\ClearHaul.Client.csproj", "{1CCECEE9-9911-4EEC-8358-6EC6777BF207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearHaul.Backup", "src\ClearHaul.Backup\ClearHaul.Backup.csproj", "{61DED003-AA12-4B86-B3F4-1B57F5FA4D1A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{089CEA13-0CB8-40A9-A9CC-B8B437302948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearHaul.BackupCli", "tools\ClearHaul.BackupCli\ClearHaul.BackupCli.csproj", "{21457DE4-6C1B-46D9-BED9-8266D531ACFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{561A4C01-E86F-4D36-8E36-25EA4156C83B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearHaul.Server.Tests", "tests\ClearHaul.Server.Tests\ClearHaul.Server.Tests.csproj", "{15CE68B9-7983-4E5D-B266-357126161AA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearHaul.Client.Tests", "tests\ClearHaul.Client.Tests\ClearHaul.Client.Tests.csproj", "{3D8B3058-E76B-48B5-A517-76DFCAEA1E8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearHaul.Backup.Tests", "tests\ClearHaul.Backup.Tests\ClearHaul.Backup.Tests.csproj", "{DB1FB454-C7CF-4EE9-867A-4648A75D535F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearHaul.Security.Tests", "tests\ClearHaul.Security.Tests\ClearHaul.Security.Tests.csproj", "{C1202948-ED2C-412C-917E-208C5A71FE79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C2BBFBC-9843-41D9-943B-91BD2B2A474A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2BBFBC-9843-41D9-943B-91BD2B2A474A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2BBFBC-9843-41D9-943B-91BD2B2A474A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2BBFBC-9843-41D9-943B-91BD2B2A474A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B030A51E-D6AD-45C9-9285-033267ADB684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B030A51E-D6AD-45C9-9285-033267ADB684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B030A51E-D6AD-45C9-9285-033267ADB684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B030A51E-D6AD-45C9-9285-033267ADB684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CCECEE9-9911-4EEC-8358-6EC6777BF207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CCECEE9-9911-4EEC-8358-6EC6777BF207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CCECEE9-9911-4EEC-8358-6EC6777BF207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CCECEE9-9911-4EEC-8358-6EC6777BF207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61DED003-AA12-4B86-B3F4-1B57F5FA4D1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61DED003-AA12-4B86-B3F4-1B57F5FA4D1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61DED003-AA12-4B86-B3F4-1B57F5FA4D1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61DED003-AA12-4B86-B3F4-1B57F5FA4D1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21457DE4-6C1B-46D9-BED9-8266D531ACFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21457DE4-6C1B-46D9-BED9-8266D531ACFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21457DE4-6C1B-46D9-BED9-8266D531ACFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21457DE4-6C1B-46D9-BED9-8266D531ACFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15CE68B9-7983-4E5D-B266-357126161AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15CE68B9-7983-4E5D-B266-357126161AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15CE68B9-7983-4E5D-B266-357126161AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15CE68B9-7983-4E5D-B266-357126161AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D8B3058-E76B-48B5-A517-76DFCAEA1E8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D8B3058-E76B-48B5-A517-76DFCAEA1E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D8B3058-E76B-48B5-A517-76DFCAEA1E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D8B3058-E76B-48B5-A517-76DFCAEA1E8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB1FB454-C7CF-4EE9-867A-4648A75D535F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB1FB454-C7CF-4EE9-867A-4648A75D535F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB1FB454-C7CF-4EE9-867A-4648A75D535F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB1FB454-C7CF-4EE9-867A-4648A75D535F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1202948-ED2C-412C-917E-208C5A71FE79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1202948-ED2C-412C-917E-208C5A71FE79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1202948-ED2C-412C-917E-208C5A71FE79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1202948-ED2C-412C-917E-208C5A71FE79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C2BBFBC-9843-41D9-943B-91BD2B2A474A} = {95A8EFA5-5A58-46CF-A359-0E81C6E2FDD1}
+		{B030A51E-D6AD-45C9-9285-033267ADB684} = {95A8EFA5-5A58-46CF-A359-0E81C6E2FDD1}
+		{1CCECEE9-9911-4EEC-8358-6EC6777BF207} = {95A8EFA5-5A58-46CF-A359-0E81C6E2FDD1}
+		{61DED003-AA12-4B86-B3F4-1B57F5FA4D1A} = {95A8EFA5-5A58-46CF-A359-0E81C6E2FDD1}
+		{21457DE4-6C1B-46D9-BED9-8266D531ACFB} = {089CEA13-0CB8-40A9-A9CC-B8B437302948}
+		{15CE68B9-7983-4E5D-B266-357126161AA3} = {561A4C01-E86F-4D36-8E36-25EA4156C83B}
+		{3D8B3058-E76B-48B5-A517-76DFCAEA1E8F} = {561A4C01-E86F-4D36-8E36-25EA4156C83B}
+		{DB1FB454-C7CF-4EE9-867A-4648A75D535F} = {561A4C01-E86F-4D36-8E36-25EA4156C83B}
+		{C1202948-ED2C-412C-917E-208C5A71FE79} = {561A4C01-E86F-4D36-8E36-25EA4156C83B}
+	EndGlobalSection
+EndGlobal
