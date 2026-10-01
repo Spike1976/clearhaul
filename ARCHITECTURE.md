@@ -36,27 +36,27 @@ The operating order's first assignment includes a Windows client shell. Decision
 
 ### PostgreSQL with PostGIS
 
-Status: not started.
+Status: local service only.
 
-The foundation health contract reports `postgres` as `NotConfigured`. The server still has no database connection. Decision CH-D-0017 approves Docker Compose and forbids installing Docker Desktop without permission. Docker is not installed. No database is created. `db/migrations/0002_phase_zero.sql` specifies Phase Zero tables and has not been applied.
+The foundation health contract reports `postgres` as `NotConfigured`. The server still has no database connection. On 2026-10-01 local Compose PostgreSQL was healthy and migrations 0001 and 0002 were applied to volume `clearhaul_clearhaul-postgres`. That database is not wired into the server.
 
 ### Object storage
 
-Status: not started.
+Status: local service only.
 
-The foundation health contract reports `objectStorage` as `NotConfigured` and forbids an object-storage connection. The operating order names uploaded documents as a later feature. That feature is not designed here and does not work. Document contents are not placed on the XRP Ledger.
+The foundation health contract reports `objectStorage` as `NotConfigured`. The server has no object-storage connection. On 2026-10-01 the local service was healthy on `pgsty/silo:RELEASE.2026-09-16T00-00-00Z` because Docker Hub removed `minio/minio`. Uploaded documents are not a product feature. Document contents are not placed on the XRP Ledger.
 
 ### Redis
 
-Status: not started.
+Status: local service only.
 
-The foundation health contract reports `redis` as `NotConfigured` and forbids a Redis connection. Decision CH-D-0017 says Compose is the local method. Compose was not started. No Redis service is running as part of this project.
+The foundation health contract reports `redis` as `NotConfigured`. The server has no Redis connection. On 2026-10-01 local Compose Redis was healthy and answered PONG. The application does not use it yet.
 
 ### Append-only audit ledger
 
-Status: not started.
+Status: partial.
 
-The operating order says the audit ledger is append-only once it exists, and that corrections are new events. No audit ledger exists. No audit table is specified. The foundation checkpoint has no auditable business action.
+The operating order says the audit ledger is append-only once it exists, and that corrections are new events. The server keeps a hash chain in memory. Migration 0002 created `audit.audit_event` on the local database. The server does not write that table. An update or delete against those triggers was not run in this session.
 
 ### XRP Ledger
 

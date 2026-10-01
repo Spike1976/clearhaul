@@ -2,7 +2,7 @@
 
 ## Applied
 
-Nothing. Docker Desktop is not installed. Compose has not been started. No database exists.
+On 2026-10-01 a new local volume `clearhaul_clearhaul-postgres` initialized from `db/migrations`. PostgreSQL reports extensions `pgcrypto`, `plpgsql`, and `postgis`, schemas `app` and `audit`, and these twelve tables: `app.app_user`, `app.equipment_history_access`, `app.equipment_history_entry`, `app.ledger_entry`, `app.load_stop`, `app.load_tender`, `app.organization`, `app.rule_package`, `app.shipment`, `app.shipment_transition`, `app.user_role`, and `audit.audit_event`. The foundation server is not connected to this database. Do not delete the volume.
 
 ## Files
 
@@ -12,6 +12,6 @@ Nothing. Docker Desktop is not installed. Compose has not been started. No datab
 
 `db/seed/001_synthetic.sql` inserts two synthetic organizations and two synthetic users. It is not mounted by Compose and has not been applied.
 
-Compose mounts `db/migrations` into the PostgreSQL init directory. That mount does nothing until a new database volume is created with Docker, which has not happened.
+Compose mounts `db/migrations` into the PostgreSQL init directory. That mount already ran on the current volume. Init scripts do not run again on the next start.
 
 The in-process domain tests do not open PostgreSQL. A passing domain test is not a migration test.

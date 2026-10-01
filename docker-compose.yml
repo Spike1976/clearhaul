@@ -1,5 +1,5 @@
-# Local development only. Docker Desktop was not installed when this file was written.
-# Image tags below have not been pulled. Do not treat these services as running.
+# Local development only. Do not treat these services as running until docker compose ps shows them healthy.
+# Docker Hub removed minio/minio. Object storage uses the pinned Silo image, which keeps the MinIO S3 API, MINIO_* settings, and /minio/health/live route.
 
 services:
   postgres:
@@ -31,7 +31,7 @@ services:
       retries: 10
 
   minio:
-    image: minio/minio:RELEASE.2024-12-18T13-15-44Z
+    image: pgsty/silo:RELEASE.2026-09-16T00-00-00Z
     command: ["server", "/data", "--console-address", ":9001"]
     environment:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER}

@@ -11,3 +11,4 @@
 - On 2026-10-01 Michael Stokes answered CH-0009 through CH-0018. The answers are CH-D-0031 through CH-D-0040. Docker may be installed. Marketplace and equipment workflows are still not built.
 - The local milestone record was combined with GitHub `main` at `61a7c8e`. The public website and the Milestone 4 and Milestone 5 orders are in the same tree. No product workflow was optimized into a finished feature.
 - Milestone 6, Controlled Pilot and Production Readiness, was added from GitHub commit `952dfdb`. The pilot has not started.
+- On 2026-10-01 Docker Desktop 4.93.0 started the local Compose stack. PostgreSQL applied migrations 0001 and 0002. Redis and object storage became healthy. Object storage uses pinned `pgsty/silo:RELEASE.2026-09-16T00-00-00Z` because Docker Hub removed `minio/minio`. The foundation server is not connected. Marketplace and equipment workflows are still not built.

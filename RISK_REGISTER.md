@@ -3,7 +3,7 @@
 | ID | Risk | Current state | What would reduce it |
 | --- | --- | --- | --- |
 | R1 | The blueprint .docx binary is absent. Markdown copies are in docs/source. | Open. Milestone 2 and Milestone 3 were ordered and were not implemented. | Keep product work behind the entry gates. Do not invent privacy or cost rules. |
-| R2 | Docker Desktop is not installed, so PostgreSQL, MinIO, and Redis are not running. | Open. Compose is written and was not started. CH-D-0031 now permits the install. | Install Docker Desktop, then run compose and a migration test. |
+| R2 | The Docker engine can stop, and the foundation server is not connected to the local services. | Reduced on 2026-10-01. Desktop 4.93.0 is installed. Compose was healthy and migrations 0001 and 0002 are on the volume. Object storage is pinned to Silo. | Keep the volume. Connect the server only with the health contract. Do not start the docker-desktop WSL distro by hand. |
 | R3 | The DPAPI backup key is tied to one Windows user. | Open. | Approve an off-computer key procedure when the external drive path exists. |
 | R4 | No off-computer backup destination has been named. | Open. Local backups can still be made. | Michael provides the external-drive path. |
 | R5 | The server speaks loopback HTTP. Sign-in is a development directory and is off unless configured. | Open for any use beyond this machine. | Add TLS and a production identity provider before any shared deployment. |
