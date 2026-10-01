@@ -2,8 +2,10 @@
 
 Date: 2026-09-30
 Current milestone: foundation checkpoint, not a finished product milestone
-Current branch: milestone/m0-foundation
-Latest code commit: 0bcd526ae17181516be8199f36327b21d508ed4e
+Current branch: main
+Published repository: https://github.com/Spike1976/clearhaul
+Foundation code commit: 0bcd526ae17181516be8199f36327b21d508ed4e
+Website merge is on main after that commit.
 Last completed task: Encrypted repository backup restored and verified.
 
 ## Counts
