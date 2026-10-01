@@ -8,7 +8,7 @@ Branch `milestone/m3-entry-gate` records that failure. It was created from `mile
 
 CH-0009 is open in Notepad and still asks permission to install Docker Desktop. CH-0010 through CH-0018 are open. They cover disclosure count and window, automatic cargo warnings, post-delivery access, cleaning selection, a named washout facility, who pays for a post-selection washout, what makes a cleaning record verified, and when a rejection may affect a rating. Do not invent those answers.
 
-Backup m1-entry-20260930 was created before the identity edits and restored with exit code 0. It has no database. A Milestone 3 entry backup is recorded in BACKUP_LOG.md when this handoff says it has been verified.
+Backup m1-entry-20260930 was created before the identity edits and restored with exit code 0. It has no database. Backup m3-entry-20260930 records commit 305f799, restored with exit code 0, and the manifest result is verified. It has no database. See BACKUP_LOG.md.
 
 The public `main` branch was not updated. No milestone tag was created. Specialists were not assigned feature work because the entry gate failed.
 

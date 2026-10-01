@@ -48,6 +48,8 @@ Blocked: Milestone 3, until every failed and partial check required by the order
 
 Release suite on this branch: 61 passed, 0 failed, 0 skipped. See TEST_RESULTS.md.
 
+Source backup m3-entry-20260930 was created from commit 305f799 and restored with exit code 0. The manifest result is verified. CURRENT_STATUS.md hashes matched. The backup contains no database. That backup does not satisfy the Milestone 2 backup check.
+
 ## Questions
 
 CH-0009 is open. It asks permission to install Docker Desktop.
